@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Appointment Scheduling — Rheumora</title>
+  <meta name="description" content="Schedule your rheumatology consultation, request infusion transfer, or contact our clinical nursing triage coordinators at Rheumora.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23184e5a'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-3H8v-2h3V8h2v3h3v2h-3z'/></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="logo" aria-label="Rheumora Homepage">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="services.html#conditions" class="nav-link">Conditions</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" id="desktopThemeToggle" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Slide Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="drawer-link"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
+      <li><a href="services.html#conditions" class="drawer-link"><i class="ph ph-dna" style="margin-inline-end: 10px;"></i> Conditions</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link active"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ph ph-user-circle" style="margin-inline-end: 10px;"></i> Dashboard</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <div class="drawer-utility-row">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode">
+          <i class="ph ph-moon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent">
+
+    <!-- PAGE HEADER -->
+    <section class="section section-alt" style="padding-bottom: var(--space-2xl);">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <span class="section-badge"><i class="ph ph-calendar-check"></i> Patient Intake & Appointments</span>
+          <h1 style="font-size: clamp(2.5rem, 5vw, 4.2rem); margin-bottom: var(--space-xs);">Connect with Our Clinical Team</h1>
+          <p class="section-subtitle">
+            Whether scheduling an initial comprehensive consultation, transferring biologic infusions, or speaking with our nursing coordinator, we are here to support you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="section">
+      <div class="container">
+        
+        <div class="grid grid-2" style="align-items: start; gap: var(--space-2xl);">
+          
+          <!-- Contact Form with Step 12 Client-side Validation -->
+          <div style="background-color: var(--color-surface); border-radius: var(--radius-global); border: 1px solid var(--color-border); box-shadow: var(--shadow-global); padding: var(--space-xl);">
+            <div class="form-header-block" style="margin-bottom: var(--space-md);">
+              <h2 style="font-size: var(--size-h3); margin-bottom: 6px;">Request Consultation</h2>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">All medical inquiries are held in strict adherence to HIPAA standards.</p>
+            </div>
+
+            <form id="consultationForm" data-validate="true" data-success-msg="Thank you! Your consultation request has been received. Our clinical intake coordinator will call you within 1 business day.">
+              
+              <div class="alert-box"></div>
+
+              <div class="grid grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="contactFirstName">First Name <span class="required-star">*</span></label>
+                  <input type="text" id="contactFirstName" name="first_name" class="form-control" placeholder="Jane" required>
+                  <span class="form-error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactLastName">Last Name <span class="required-star">*</span></label>
+                  <input type="text" id="contactLastName" name="last_name" class="form-control" placeholder="Doe" required>
+                  <span class="form-error-msg"></span>
+                </div>
+              </div>
+
+              <div class="grid grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="contactEmail">Email Address <span class="required-star">*</span></label>
+                  <input type="email" id="contactEmail" name="email" class="form-control" placeholder="jane.doe@example.com" required>
+                  <span class="form-error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactPhone">Phone Number <span class="required-star">*</span></label>
+                  <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="(555) 000-0000" required>
+                  <span class="form-error-msg"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactReason">Clinical Service or Reason for Visit <span class="required-star">*</span></label>
+                <select id="contactReason" name="reason" class="form-control" required>
+                  <option value="">Select clinical reason...</option>
+                  <option value="new-patient">New Patient Diagnostic Evaluation (Joint Pain / Stiffness)</option>
+                  <option value="infusion-transfer">Biologic Infusion Suite Transfer (Already on Biologic)</option>
+                  <option value="second-opinion">Second Opinion on Autoimmune Diagnosis</option>
+                  <option value="ultrasound">Musculoskeletal Ultrasound Assessment</option>
+                  <option value="lupus-care">Lupus / Connective Tissue Specialization</option>
+                </select>
+                <span class="form-error-msg"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Symptom Summary or Referral Details</label>
+                <textarea id="contactMessage" name="message" class="form-control" placeholder="Please describe any joint symptoms, morning stiffness duration, or current medications..."></textarea>
+                <span class="form-error-msg"></span>
+              </div>
+
+              <div class="form-checkbox-row">
+                <input type="checkbox" id="contactConsent" name="terms" required>
+                <label for="contactConsent">I agree to be contacted regarding my clinical appointment and understand communications are secure.</label>
+              </div>
+
+              <div style="display: flex; justify-content: center; width: 100%;">
+                <button type="submit" class="btn btn-primary" data-original-text="Submit Consultation Request">
+                  <i class="ph ph-calendar-plus"></i> Submit Consultation Request
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Clinic Location & Hours Info -->
+          <div>
+            
+            <div class="card clinic-hq-card" style="margin-bottom: var(--space-lg); padding: var(--space-xl);">
+              <div class="card-icon" style="margin-bottom: var(--space-sm);"><i class="ph ph-hospital"></i></div>
+              <h3 class="card-title">Center Headquarters</h3>
+              
+              <p style="margin-bottom: 12px;">
+                <strong>Rheumora Rheumatology Pavilion</strong><br>
+                450 Medical Arts Pavilion, Suite 400<br>
+                Longwood Medical Area, Boston, MA 02115
+              </p>
+
+              <p style="margin-bottom: 12px;">
+                <strong>Direct Phone:</strong> +1 (800) 743-8667<br>
+                <strong>Confidential Fax:</strong> +1 (800) 743-8668<br>
+                <strong>Clinical Email:</strong> intake@rheumora-health.com
+              </p>
+
+              <p style="margin-bottom: 0;">
+                <strong>Clinical Hours:</strong><br>
+                Monday – Friday: 7:30 AM – 6:00 PM<br>
+                Saturday (Infusion Suite Only): 8:00 AM – 2:00 PM<br>
+                Sunday: Closed (On-Call Nurse Triage Active)
+              </p>
+            </div>
+
+            <!-- Interactive Map Placeholder Box -->
+            <div style="background: var(--color-surface); border-radius: var(--radius-global); border: 1px solid var(--color-border); box-shadow: var(--shadow-global); overflow: hidden;">
+              <div style="background: var(--color-surface-soft); height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; border-bottom: 1px solid var(--color-border);">
+                <i class="ph ph-map-pin" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 8px;"></i>
+                <strong style="color: var(--color-primary); font-size: 1.1rem;">Longwood Medical Area, Boston</strong>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);">Direct MBTA Green Line D-Branch Access • Valet Patient Drop-off</span>
+              </div>
+              <div class="clinic-access-note" style="padding: 16px; font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">
+                <i class="ph ph-wheelchair" style="color: var(--color-secondary); margin-inline-end: 6px;"></i>
+                Wheelchair-accessible covered garage parking located directly beneath the Pavilion with dedicated elevator to Suite 400.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;">
+            <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+            <span>Rheumora</span>
+          </a>
+          <p class="footer-desc">
+            A state-of-the-art center dedicated to transforming the diagnosis, biologic therapy, and sustained remission of autoimmune, arthritis, and connective tissue diseases.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Care Center</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Care Overview</a></li>
+            <li><a href="home2.html">Home 2 (Navigator)</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="about.html">About Medical Board</a></li>
+            <li><a href="dashboard.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Conditions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#ra">Rheumatoid Arthritis</a></li>
+            <li><a href="services.html#lupus">Systemic Lupus (SLE)</a></li>
+            <li><a href="services.html#psa">Psoriatic Arthritis</a></li>
+            <li><a href="services.html#infusion">Biologic Infusion Suites</a></li>
+            <li><a href="services.html#ultrasound">Musculoskeletal Ultrasound</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <ul class="footer-links">
+            <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
+            <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
+            <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon – Fri: 7:30 AM – 6:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 Rheumora Rheumatology & Autoimmune Care Center. All Rights Reserved. Medical advice disclaimer: Information provided is for educational purposes only.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

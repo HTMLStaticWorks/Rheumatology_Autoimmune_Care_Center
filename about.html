@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us & Medical Board — Rheumora</title>
+  <meta name="description" content="Meet the board-certified rheumatologists, researchers, and clinical care coordinators at Rheumora dedicated to transforming autoimmune patient outcomes.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23184e5a'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-3H8v-2h3V8h2v3h3v2h-3z'/></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="logo" aria-label="Rheumora Homepage">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="services.html#conditions" class="nav-link">Conditions</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" id="desktopThemeToggle" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Slide Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="drawer-link"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
+      <li><a href="about.html" class="drawer-link active"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
+      <li><a href="services.html#conditions" class="drawer-link"><i class="ph ph-dna" style="margin-inline-end: 10px;"></i> Conditions</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ph ph-user-circle" style="margin-inline-end: 10px;"></i> Dashboard</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <div class="drawer-utility-row">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode">
+          <i class="ph ph-moon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent">
+
+    <!-- PAGE HEADER -->
+    <section class="section section-alt" style="padding-bottom: var(--space-2xl);">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <span class="section-badge"><i class="ph ph-buildings"></i> Our Mission & Team</span>
+          <h1 style="font-size: clamp(2.5rem, 5vw, 4.2rem); margin-bottom: var(--space-xs);">Clinical Leadership Dedicated to You</h1>
+          <p class="section-subtitle">
+            Founded with an uncompromising commitment to clinical excellence, Rheumora integrates translational autoimmune science with holistic, patient-first care.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER STORY & PHILOSOPHY -->
+    <section class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-chat-circle-dots"></i> Medical Director's Vision</span>
+          <h2 class="section-title">A Care Model Built Around the Realities of Autoimmune Disease</h2>
+          <p class="section-subtitle">
+            Pioneering a compassionate, integrated approach to chronic rheumatic illness and swift remission.
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="align-items: center;">
+          <div style="border-radius: var(--radius-global); overflow: hidden; box-shadow: var(--shadow-global); border: 1px solid var(--color-border);">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Dr. Evelyn Vance consulting with laboratory team" loading="lazy">
+          </div>
+
+          <div>
+            <h3 style="font-size: var(--size-h4); margin-bottom: 16px; text-align: start;">The Founder's Commitment to Earlier Intervention</h3>
+            <p style="text-align: start;">
+              "For decades, autoimmune care has suffered from delayed referrals, disjointed imaging, and stressful infusion environments. Rheumora was created to fix that broken paradigm," says <strong>Dr. Evelyn Vance, MD, FACR</strong>, Founder and Medical Director.
+            </p>
+            <p style="text-align: start;">
+              "We brought the diagnostic ultrasound, the certified infusion nurses, and the prior-authorization navigators under one tranquil roof. When patients step into our center, they feel heard, validated, and genuinely protected."
+            </p>
+            
+            <div style="display: flex; gap: 24px; margin-top: 20px;">
+              <div>
+                <div style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: var(--weight-h2); color: var(--color-primary);">100%</div>
+                <div style="font-size: 0.85rem; color: var(--color-text-muted);">Board Certified Faculty</div>
+              </div>
+              <div style="border-inline-start: 1px solid var(--color-border); padding-inline-start: 24px;">
+                <div style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: var(--weight-h2); color: var(--color-primary);">40+</div>
+                <div style="font-size: 0.85rem; color: var(--color-text-muted);">Peer-Reviewed Papers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MISSION & VISION VALUES -->
+    <section class="section section-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-compass"></i> Guiding Principles</span>
+          <h2 class="section-title">Our Pillars of Patient-Centered Medicine</h2>
+          <p class="section-subtitle">
+            Every clinical decision is guided by three foundational tenets designed to minimize suffering and maximize quality of life.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-timer"></i></div>
+            <h3 class="card-title">Prompt Intake Protocol</h3>
+            <p class="card-text">We eliminate months-long waitlists. Autoimmune conditions do not wait, and neither should patients experiencing joint inflammation.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-dna"></i></div>
+            <h3 class="card-title">Precision Biologics</h3>
+            <p class="card-text">We utilize advanced serology and targeted cytokines rather than trial-and-error treatments, ensuring faster progression into remission.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-heart-straight"></i></div>
+            <h3 class="card-title">Whole-Patient Dignity</h3>
+            <p class="card-text">From soothing infusion suites to dedicated insurance navigators, we eliminate the anxiety and logistics that burden chronic care.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MEDICAL BOARD / SPECIALIST TEAM -->
+    <section class="section" id="specialistsTeam">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-users-three"></i> Clinical Faculty</span>
+          <h2 class="section-title">Meet Our Board of Rheumatology Specialists</h2>
+          <p class="section-subtitle">
+            Internationally respected physicians, ultrasound educators, and autoimmune researchers working collaboratively for your care.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <div class="team-card">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="Dr. Evelyn Vance, MD" style="width: 140px; height: 140px; border-radius: var(--radius-global); object-fit: cover; margin-bottom: 16px; border: 2px solid var(--color-primary);" loading="lazy">
+            <h3 class="card-title" style="margin-bottom: 4px;">Dr. Evelyn Vance, MD, FACR</h3>
+            <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: var(--weight-label); margin-bottom: 12px;">Founder & Clinical Director</span>
+            <p class="card-text">Harvard Medical School alumnus with 22 years specializing in refractory Rheumatoid Arthritis and targeted biologic modulators.</p>
+          </div>
+
+          <div class="team-card">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" alt="Dr. Marcus Sterling, MD" style="width: 140px; height: 140px; border-radius: var(--radius-global); object-fit: cover; margin-bottom: 16px; border: 2px solid var(--color-primary);" loading="lazy">
+            <h3 class="card-title" style="margin-bottom: 4px;">Dr. Marcus Sterling, MD, RhMSUS</h3>
+            <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: var(--weight-label); margin-bottom: 12px;">Director of Joint Imaging</span>
+            <p class="card-text">National authority in point-of-care musculoskeletal ultrasound and image-guided regenerative synovial therapeutics.</p>
+          </div>
+
+          <div class="team-card">
+            <img src="https://images.unsplash.com/photo-1594824813681-42ec935a8d4a?auto=format&fit=crop&w=400&q=80" alt="Dr. Serena Patel, MD" style="width: 140px; height: 140px; border-radius: var(--radius-global); object-fit: cover; margin-bottom: 16px; border: 2px solid var(--color-primary);" loading="lazy">
+            <h3 class="card-title" style="margin-bottom: 4px;">Dr. Serena Patel, MD</h3>
+            <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: var(--weight-label); margin-bottom: 12px;">Head of Connective Tissue Disease</span>
+            <p class="card-text">Specialist in Systemic Lupus, Sjögren’s Syndrome, and complex autoimmune pregnancy co-management protocols.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLINICAL MILESTONES & TIMELINE -->
+    <section class="section section-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-hourglass-high"></i> Heritage & Growth</span>
+          <h2 class="section-title">Milestones in Autoimmune Innovation</h2>
+          <p class="section-subtitle">
+            A timeline of continuous clinical advancements dedicated to raising the standard of rheumatologic care.
+          </p>
+        </div>
+
+        <div class="grid grid-4">
+          
+          <div class="card">
+            <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: var(--weight-h2); color: var(--color-primary); margin-bottom: 6px;">2014</div>
+            <h3 class="card-title" style="font-size: 1.15rem;">Founding of Rheumora</h3>
+            <p class="card-text">Established as an independent specialized clinic committed to early rheumatoid intervention.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: var(--weight-h2); color: var(--color-primary); margin-bottom: 6px;">2018</div>
+            <h3 class="card-title" style="font-size: 1.15rem;">Dedicated Infusion Wing</h3>
+            <p class="card-text">Opened our 12-bay luxury infusion suite, reducing hospital transfer burdens for over 2,000 regional patients.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: var(--weight-h2); color: var(--color-primary); margin-bottom: 6px;">2022</div>
+            <h3 class="card-title" style="font-size: 1.15rem;">Rapid Ultrasound Lab</h3>
+            <p class="card-text">Implemented high-frequency power Doppler ultrasound across all examination rooms for same-day clarity.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: var(--weight-h2); color: var(--color-primary); margin-bottom: 6px;">2026</div>
+            <h3 class="card-title" style="font-size: 1.15rem;">Tele-Rheumatology Hub</h3>
+            <p class="card-text">Expanded digital flare monitoring and hybrid patient portal serving patients across New England.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Partner with an Award-Winning Clinical Team</h2>
+        <p>
+          Experience the confidence of having experienced rheumatologists guiding your path to sustained joint comfort.
+        </p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-accent">
+            <i class="ph ph-calendar-plus"></i> Request Consultation
+          </a>
+          <a href="services.html" class="btn btn-secondary">
+            <i class="ph ph-first-aid"></i> Explore Care Options
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;">
+            <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+            <span>Rheumora</span>
+          </a>
+          <p class="footer-desc">
+            A state-of-the-art center dedicated to transforming the diagnosis, biologic therapy, and sustained remission of autoimmune, arthritis, and connective tissue diseases.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Care Center</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Care Overview</a></li>
+            <li><a href="home2.html">Home 2 (Navigator)</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="about.html">About Medical Board</a></li>
+            <li><a href="dashboard.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Conditions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#ra">Rheumatoid Arthritis</a></li>
+            <li><a href="services.html#lupus">Systemic Lupus (SLE)</a></li>
+            <li><a href="services.html#psa">Psoriatic Arthritis</a></li>
+            <li><a href="services.html#infusion">Biologic Infusion Suites</a></li>
+            <li><a href="services.html#ultrasound">Musculoskeletal Ultrasound</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <ul class="footer-links">
+            <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
+            <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
+            <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon – Fri: 7:30 AM – 6:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 Rheumora Rheumatology & Autoimmune Care Center. All Rights Reserved. Medical advice disclaimer: Information provided is for educational purposes only.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

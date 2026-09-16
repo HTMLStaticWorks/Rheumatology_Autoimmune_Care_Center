@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rheumora — Clinical Excellence in Joint & Autoimmune Health (Home 2)</title>
+  <meta name="description" content="Discover Rheumora’s interactive joint symptom assessment tool, specialized biologic therapies, and holistic multidisciplinary rheumatology care.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23184e5a'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-3H8v-2h3V8h2v3h3v2h-3z'/></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       SITE HEADER / NAVBAR
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="logo" aria-label="Rheumora Homepage">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+
+      <!-- Desktop Nav Menu (> 1024px) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link active">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="services.html#conditions" class="nav-link">Conditions</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions Right -->
+      <div class="header-actions">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+
+        <button type="button" class="btn-icon-square theme-toggle-btn" id="desktopThemeToggle" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+          <i class="ph ph-moon"></i>
+        </button>
+
+        <a href="login.html" class="btn btn-primary">Login</a>
+
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Slide Drawer (≤ 1024px) -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="drawer-link"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link active"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
+      <li><a href="services.html#conditions" class="drawer-link"><i class="ph ph-dna" style="margin-inline-end: 10px;"></i> Conditions</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ph ph-user-circle" style="margin-inline-end: 10px;"></i> Dashboard</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <div class="drawer-utility-row">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode">
+          <i class="ph ph-moon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN CONTENT
+       ======================================================================== -->
+  <main id="mainContent">
+
+    <!-- 1. UNIQUE SPLIT EDITORIAL HERO (Home 2) -->
+    <section class="section" style="padding-top: var(--space-2xl); background: radial-gradient(circle at 10% 20%, var(--color-surface-soft) 0%, var(--color-bg) 70%);">
+      <div class="container">
+        <div class="hero-split">
+          
+          <div class="hero-split-text">
+            <div class="hero-badge">
+              <i class="ph ph-lightning"></i>
+              <span>Next-Day Priority Triage Appointments Available</span>
+            </div>
+
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.2rem);">
+              Precision Therapeutics for Complex Joint & <span class="typewriter-word">Immune</span> Conditions
+            </h1>
+
+            <p class="hero-lead">
+              Our multidisciplinary rheumatology center redefines patient recovery with personalized biologic dosing, on-site infusion serenity, and ultrasound-guided joint preservation.
+            </p>
+
+            <div class="hero-actions">
+              <a href="contact.html" class="btn btn-primary">
+                <i class="ph ph-calendar-plus"></i> Book Rapid Consultation
+              </a>
+              <a href="#jointNavigator" class="btn btn-secondary">
+                <i class="ph ph-magnifying-glass"></i> Interactive Symptom Check
+              </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div style="display: flex; align-items: center; gap: 20px; margin-top: var(--space-lg); flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <i class="ph ph-seal-check" style="color: var(--color-secondary); font-size: 1.4rem;"></i>
+                <span style="font-size: 0.9rem; font-weight: var(--weight-label);">American College of Rheumatology Fellows</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <i class="ph ph-flask" style="color: var(--color-accent); font-size: 1.4rem;"></i>
+                <span style="font-size: 0.9rem; font-weight: var(--weight-label);">State-of-the-Art Biologic Protocols</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-split-visual">
+            <div class="hero-split-card">
+              <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=900&q=80" alt="Rheumatologist examining joint mobility with modern diagnostic technology" loading="eager">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. INTERACTIVE SECTION: JOINT & SYMPTOM NAVIGATOR (Step 9.2) -->
+    <section class="section" id="jointNavigator">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-cpu"></i> Self-Assessment Tool</span>
+          <h2 class="section-title">Interactive Joint & Symptom Navigator</h2>
+          <p class="section-subtitle">
+            Select an anatomical area or systemic presentation below to understand potential autoimmune patterns and our recommended clinical evaluation pathways.
+          </p>
+        </div>
+
+        <div class="navigator-container">
+          
+          <!-- Navigator Filter Tabs -->
+          <div class="navigator-tabs" role="tablist">
+            <button type="button" class="nav-tab-btn active" data-joint="hands" role="tab" aria-selected="true">
+              <i class="ph ph-hand"></i> Hands & Wrists
+            </button>
+            <button type="button" class="nav-tab-btn" data-joint="spine" role="tab" aria-selected="false">
+              <i class="ph ph-arrows-down-up"></i> Axial Spine & Sacroiliac
+            </button>
+            <button type="button" class="nav-tab-btn" data-joint="knees" role="tab" aria-selected="false">
+              <i class="ph ph-activity"></i> Knees & Hips
+            </button>
+            <button type="button" class="nav-tab-btn" data-joint="systemic" role="tab" aria-selected="false">
+              <i class="ph ph-butterfly"></i> Systemic & Connective (Lupus)
+            </button>
+          </div>
+
+          <!-- Dynamic Panel Content -->
+          <div class="navigator-content-panel" id="navigatorPanel">
+            
+            <div class="navigator-panel-visual">
+              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Targeted musculoskeletal joint evaluation" loading="lazy">
+            </div>
+
+            <div class="navigator-panel-details">
+              <span class="section-badge" style="margin-bottom: 8px;">Clinical Diagnostic Profile</span>
+              <h3 class="nav-detail-title">Small Joints: Hands, Wrists & Fingers</h3>
+              
+              <p class="nav-detail-desc">
+                Symmetric swelling, early morning stiffness persisting over 45 minutes, and MCP/PIP joint tenderness are hallmarks of early Rheumatoid Arthritis or Psoriatic Arthritis. Early ultrasound diagnostics prevent irreversible joint erosions.
+              </p>
+
+              <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Common Manifestations:</h4>
+              <div class="symptom-tag-list">
+                <span class="symptom-tag">Morning Stiffness > 45m</span>
+                <span class="symptom-tag">Symmetric Swelling</span>
+                <span class="symptom-tag">Grip Weakness</span>
+                <span class="symptom-tag">Tenosynovitis</span>
+              </div>
+
+              <div style="background-color: var(--color-surface-soft); padding: 16px; border-radius: var(--radius-global); border-inline-start: 4px solid var(--color-primary); margin-bottom: 20px;">
+                <strong style="color: var(--color-primary); display: block; margin-bottom: 4px;">Recommended Rheumora Assessment:</strong>
+                <span class="nav-detail-rec" style="font-size: 0.95rem; color: var(--color-text);">
+                  Targeted High-Resolution Musculoskeletal Ultrasound & Anti-CCP Serology
+                </span>
+              </div>
+
+              <a href="contact.html" class="btn btn-primary">
+                <i class="ph ph-calendar-check"></i> Book Diagnostic Evaluation
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. CLINICAL CARE MILESTONES / TIMELINE -->
+    <section class="section section-alt" id="carePathway">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-chart-line-up"></i> The Rheumora Care Journey</span>
+          <h2 class="section-title">Your Pathway from Acute Flare to Remission</h2>
+          <p class="section-subtitle">
+            A structured, 4-phase clinical methodology ensuring you never navigate your health journey without proactive guidance.
+          </p>
+        </div>
+
+        <div class="grid grid-4">
+          
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-magnifying-glass"></i></div>
+            <div style="color: var(--color-accent); font-weight: var(--weight-bold-inline); font-size: 0.85rem; margin-bottom: 4px;">PHASE 01</div>
+            <h3 class="card-title">Comprehensive Intake</h3>
+            <p class="card-text">60-minute physician consultation, point-of-care ultrasound, and exhaustive autoimmune serology panels.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-target"></i></div>
+            <div style="color: var(--color-accent); font-weight: var(--weight-bold-inline); font-size: 0.85rem; margin-bottom: 4px;">PHASE 02</div>
+            <h3 class="card-title">Precision Targeting</h3>
+            <p class="card-text">Selection of targeted biologic therapies, oral DMARDs, and immediate pain-relief interventions.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-armchair"></i></div>
+            <div style="color: var(--color-accent); font-weight: var(--weight-bold-inline); font-size: 0.85rem; margin-bottom: 4px;">PHASE 03</div>
+            <h3 class="card-title">Infusion Tranquility</h3>
+            <p class="card-text">On-site therapeutic biologic administration in dedicated suites monitored by rheumatology nurse specialists.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-shield-check"></i></div>
+            <div style="color: var(--color-accent); font-weight: var(--weight-bold-inline); font-size: 0.85rem; margin-bottom: 4px;">PHASE 04</div>
+            <h3 class="card-title">Remission Monitoring</h3>
+            <p class="card-text">Regular biomarker reassessment, ultrasound joint tracking, and personalized lifestyle adjustments.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PATIENT REASSURANCE & TESTIMONIAL GRID -->
+    <section class="section" id="storiesReorganized">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-star"></i> Clinical Outcomes</span>
+          <h2 class="section-title">Patient Testimonials & Clinical Evidence</h2>
+          <p class="section-subtitle">
+            Every patient brings a unique journey. Here is how our care center helps transform debilitating symptoms into vibrant recoveries.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <div class="testimonial-card">
+            <div class="card-icon"><i class="ph ph-quotes"></i></div>
+            <p class="testimonial-quote">
+              "The ability to get diagnostic ultrasound during my very first visit took away weeks of anxiety. I started biologic therapy without delays and can hold my grandchildren again pain-free."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Patient Maria Gomez" class="testimonial-avatar" loading="lazy">
+              <div class="testimonial-name">Maria Gomez, 51</div>
+              <div class="testimonial-condition">Seropositive Rheumatoid Arthritis</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="card-icon"><i class="ph ph-quotes"></i></div>
+            <p class="testimonial-quote">
+              "The dedicated patient navigators resolved my insurance pre-authorization in three days when other clinics took two months. The care here is prompt, humane, and deeply scientific."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Patient Arthur Hayes" class="testimonial-avatar" loading="lazy">
+              <div class="testimonial-name">Arthur Hayes, 46</div>
+              <div class="testimonial-condition">Ankylosing Spondylitis Management</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="card-icon"><i class="ph ph-quotes"></i></div>
+            <p class="testimonial-quote">
+              "Rheumora is what modern healthcare should feel like. Clean, serene infusion rooms, compassionate nurses who remember your name, and doctors who truly listen."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80" alt="Patient Chloe Bennett" class="testimonial-avatar" loading="lazy">
+              <div class="testimonial-name">Chloe Bennett, 34</div>
+              <div class="testimonial-condition">Sjögren’s Syndrome & Joint Care</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. CTA -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Schedule an In-Depth Evaluation with Our Specialists</h2>
+        <p>
+          Whether you need a second opinion, early arthritis screening, or a smooth transfer of your biologic infusions, Rheumora is ready to welcome you.
+        </p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-accent">
+            <i class="ph ph-calendar-plus"></i> Request Appointment
+          </a>
+          <a href="dashboard.html" class="btn btn-secondary">
+            <i class="ph ph-user"></i> Access Patient Portal
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;">
+            <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+            <span>Rheumora</span>
+          </a>
+          <p class="footer-desc">
+            A state-of-the-art center dedicated to transforming the diagnosis, biologic therapy, and sustained remission of autoimmune, arthritis, and connective tissue diseases.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Care Center</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Care Overview</a></li>
+            <li><a href="home2.html">Home 2 (Navigator)</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="about.html">About Medical Board</a></li>
+            <li><a href="dashboard.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Conditions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#ra">Rheumatoid Arthritis</a></li>
+            <li><a href="services.html#lupus">Systemic Lupus (SLE)</a></li>
+            <li><a href="services.html#psa">Psoriatic Arthritis</a></li>
+            <li><a href="services.html#infusion">Biologic Infusion Suites</a></li>
+            <li><a href="services.html#ultrasound">Musculoskeletal Ultrasound</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <ul class="footer-links">
+            <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
+            <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
+            <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon – Fri: 7:30 AM – 6:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 Rheumora Rheumatology & Autoimmune Care Center. All Rights Reserved. Medical advice disclaimer: Information provided is for educational purposes only.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

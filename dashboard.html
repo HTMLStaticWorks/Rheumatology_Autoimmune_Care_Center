@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Portal & Health Records — Rheumora</title>
+  <meta name="description" content="Rheumora Patient Portal: monitor your rheumatology lab biomarkers, track joint flare-ups, and manage biologic infusion appointments.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23184e5a'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-3H8v-2h3V8h2v3h3v2h-3z'/></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="logo" aria-label="Rheumora Homepage">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="services.html#conditions" class="nav-link">Conditions</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" id="desktopThemeToggle" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Slide Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="drawer-link"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
+      <li><a href="services.html#conditions" class="drawer-link"><i class="ph ph-dna" style="margin-inline-end: 10px;"></i> Conditions</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link active"><i class="ph ph-user-circle" style="margin-inline-end: 10px;"></i> Dashboard</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <div class="drawer-utility-row">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode">
+          <i class="ph ph-moon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent">
+
+    <section class="section" style="padding-top: var(--space-xl);">
+      <div class="container">
+        
+        <div class="dashboard-grid">
+          
+          <!-- SIDEBAR -->
+          <aside class="dashboard-sidebar">
+            <div class="dash-user-profile">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Sarah Mitchell Profile" class="dash-avatar">
+              <h2 style="font-size: 1.2rem; margin-bottom: 2px; text-align: center;">Sarah Mitchell</h2>
+              <span style="font-size: 0.8rem; color: var(--color-accent); font-weight: var(--weight-label);">MRN #RA-884210</span>
+              <span style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Rheumatologist: Dr. E. Vance, MD</span>
+            </div>
+
+            <ul class="dash-menu">
+              <li>
+                <button type="button" class="dash-menu-btn active" data-target="panelOverview">
+                  <i class="ph ph-chart-pie-slice"></i> Health Overview
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dash-menu-btn" data-target="panelAppointments">
+                  <i class="ph ph-calendar"></i> Infusion Visits
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dash-menu-btn" data-target="panelFlareLog">
+                  <i class="ph ph-notebook"></i> Flare-Up Journal
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dash-menu-btn" data-target="panelLabs">
+                  <i class="ph ph-flask"></i> Lab Biomarkers
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dash-menu-btn" data-target="panelMeds">
+                  <i class="ph ph-pill"></i> Prescriptions
+                </button>
+              </li>
+              <li style="margin-top: 16px; border-top: 1px solid var(--color-border); padding-top: 12px;">
+                <a href="login.html" class="dash-menu-btn" style="color: var(--color-error);">
+                  <i class="ph ph-sign-out"></i> Logout
+                </a>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- PANELS CONTAINER -->
+          <div class="dashboard-content-area">
+            
+            <!-- 1. OVERVIEW PANEL -->
+            <div class="dashboard-panel active" id="panelOverview">
+              
+              <div class="section-header" style="text-align: start; margin-bottom: var(--space-lg); max-width: 100%;">
+                <h2 style="font-size: var(--size-h3); margin-bottom: 4px; text-align: start;">Patient Health Overview</h2>
+                <p style="text-align: start; margin-bottom: 0;">Status: <strong>Clinical Remission (DAS28 &lt; 2.6)</strong> • Monitored via Bi-Monthly Infliximab Infusions</p>
+              </div>
+
+              <!-- KPI Summary Cards -->
+              <div class="kpi-row">
+                <div class="kpi-card">
+                  <span style="font-size: 0.85rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;">Disease Activity Score</span>
+                  <div class="kpi-num">2.1 <span style="font-size: 0.9rem; color: var(--color-success); font-family: var(--font-body); font-weight: var(--weight-bold-inline);">(Remission)</span></div>
+                  <span style="font-size: 0.8rem; color: var(--color-text-muted);">DAS28-CRP scale &lt; 2.6</span>
+                </div>
+
+                <div class="kpi-card">
+                  <span style="font-size: 0.85rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;">Inflammation (hsCRP)</span>
+                  <div class="kpi-num">1.4 <span style="font-size: 0.9rem; color: var(--color-success); font-family: var(--font-body); font-weight: var(--weight-bold-inline);">mg/L (Normal)</span></div>
+                  <span style="font-size: 0.8rem; color: var(--color-text-muted);">Reference range: &lt; 3.0 mg/L</span>
+                </div>
+
+                <div class="kpi-card">
+                  <span style="font-size: 0.85rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;">Next Infusion Session</span>
+                  <div class="kpi-num" style="font-size: 1.4rem; padding-top: 4px;">Oct 14, 2026</div>
+                  <span style="font-size: 0.8rem; color: var(--color-secondary);">Suite Bay 4 • 9:30 AM</span>
+                </div>
+              </div>
+
+              <!-- Upcoming Activity Card -->
+              <div class="card" style="align-items: flex-start; text-align: start; padding: var(--space-lg); margin-bottom: var(--space-lg);">
+                <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 12px; flex-wrap: wrap;">
+                  <h3 class="card-title" style="margin-bottom: 0;">Care Plan Actions Required</h3>
+                  <span class="section-badge" style="margin-bottom: 0;">Priority: Routine</span>
+                </div>
+                <ul style="padding-inline-start: 20px; line-height: 1.8; color: var(--color-text);">
+                  <li>Routine pre-infusion complete blood count (CBC) and liver panel scheduled for Oct 10 at Rheumora In-House Lab.</li>
+                  <li>Annual musculoskeletal power Doppler ultrasound follow-up confirmed for November 2026.</li>
+                  <li>Daily vitamin D3 (2000 IU) and anti-inflammatory nutrition regimen active.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- 2. APPOINTMENTS PANEL -->
+            <div class="dashboard-panel" id="panelAppointments">
+              <div class="section-header" style="text-align: start; margin-bottom: var(--space-lg); max-width: 100%;">
+                <h2 style="font-size: var(--size-h3); margin-bottom: 4px; text-align: start;">Infusion Visits & Appointments</h2>
+                <p style="text-align: start; margin-bottom: 0;">Schedule, reschedule, or view upcoming therapeutic biologic infusion sessions.</p>
+              </div>
+
+              <!-- Book Visit Form -->
+              <div class="card" style="align-items: flex-start; text-align: start; padding: var(--space-lg); margin-bottom: var(--space-lg);">
+                <h3 class="card-title" style="margin-bottom: 12px;">Reserve Infusion Chair or Follow-Up</h3>
+                <div id="apptAlert" class="alert-box" style="width: 100%;"></div>
+
+                <form id="bookApptForm" style="width: 100%;">
+                  <div class="grid grid-2">
+                    <div class="form-group">
+                      <label class="form-label" for="apptType">Appointment Type</label>
+                      <select id="apptType" class="form-control" required>
+                        <option value="infusion">Biologic Infusion Session (2 Hours)</option>
+                        <option value="ultrasound">Musculoskeletal Joint Ultrasound</option>
+                        <option value="md-review">Physician Follow-up with Dr. Vance</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="apptDate">Preferred Date</label>
+                      <input type="date" id="apptDate" class="form-control" required>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+                    <i class="ph ph-check-circle"></i> Confirm Booking Request
+                  </button>
+                </form>
+              </div>
+
+              <!-- Visit History -->
+              <div class="card" style="align-items: flex-start; text-align: start; padding: var(--space-lg);">
+                <h3 class="card-title" style="margin-bottom: 12px;">Completed Infusion History</h3>
+                <div style="width: 100%; border-bottom: 1px solid var(--color-border); padding-block: 10px;">
+                  <strong>Aug 18, 2026</strong> — Infliximab 300mg IV Infusion • Pre-meds: Cetirizine 10mg • Vitals stable. Nurse: J. Alvarez, RN
+                </div>
+                <div style="width: 100%; border-bottom: 1px solid var(--color-border); padding-block: 10px;">
+                  <strong>Jun 22, 2026</strong> — Infliximab 300mg IV Infusion • Pre-meds: Cetirizine 10mg • Vitals stable. Nurse: J. Alvarez, RN
+                </div>
+                <div style="width: 100%; padding-block: 10px;">
+                  <strong>Apr 27, 2026</strong> — Infliximab 300mg IV Infusion • Pre-meds: Cetirizine 10mg • Vitals stable. Nurse: M. O'Connor, RN
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. FLARE-UP JOURNAL PANEL -->
+            <div class="dashboard-panel" id="panelFlareLog">
+              <div class="section-header" style="text-align: start; margin-bottom: var(--space-lg); max-width: 100%;">
+                <h2 style="font-size: var(--size-h3); margin-bottom: 4px; text-align: start;">Flare-Up & Pain Journal</h2>
+                <p style="text-align: start; margin-bottom: 0;">Log acute flare episodes so your rheumatologist can evaluate treatment response at your next visit.</p>
+              </div>
+
+              <!-- Flare Form -->
+              <div class="card" style="align-items: flex-start; text-align: start; padding: var(--space-lg); margin-bottom: var(--space-lg);">
+                <h3 class="card-title" style="margin-bottom: 12px;">Log New Flare Episode</h3>
+                <div id="flareAlert" class="alert-box" style="width: 100%;"></div>
+
+                <form id="flareLogForm" style="width: 100%;">
+                  <div class="grid grid-3">
+                    <div class="form-group">
+                      <label class="form-label" for="flareJoint">Primary Joint Involved</label>
+                      <select id="flareJoint" class="form-control" required>
+                        <option value="Right Wrist & Hand">Right Wrist & Hand</option>
+                        <option value="Left Wrist & Hand">Left Wrist & Hand</option>
+                        <option value="Bilateral Knees">Bilateral Knees</option>
+                        <option value="Cervical / Lumbar Spine">Cervical / Lumbar Spine</option>
+                        <option value="Feet & Ankles">Feet & Ankles</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="flarePainLevel">Pain Scale (1 to 10)</label>
+                      <select id="flarePainLevel" class="form-control" required>
+                        <option value="1">1 - Minimal</option>
+                        <option value="3">3 - Mild Aching</option>
+                        <option value="5" selected>5 - Moderate Pain</option>
+                        <option value="7">7 - Severe Discomfort</option>
+                        <option value="9">9 - Incapacitating</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="flareStiffness">Morning Stiffness (Minutes)</label>
+                      <input type="number" id="flareStiffness" class="form-control" value="30" min="0" max="300" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="flareNotes">Symptoms / Flare Triggers</label>
+                    <textarea id="flareNotes" class="form-control" placeholder="Describe swelling, heat, fatigue, weather changes, or sleep disruptions..."></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">
+                    <i class="ph ph-plus-circle"></i> Save Flare Entry
+                  </button>
+                </form>
+              </div>
+
+              <!-- Flare History List -->
+              <h3 style="font-size: 1.15rem; margin-bottom: 12px; text-align: start;">Past Journal Entries</h3>
+              <div id="flareHistoryList">
+                <div class="card" style="padding: 16px; align-items: flex-start; text-align: start; margin-bottom: 12px;">
+                  <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: var(--color-primary); font-size: 1.05rem;">Right Wrist &amp; 2nd MCP — Pain: 4/10</strong>
+                    <span style="font-size: 0.8rem; color: var(--color-text-muted);">Aug 02, 2026</span>
+                  </div>
+                  <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Stiffness Duration:</strong> 25 minutes</p>
+                  <p style="font-size: 0.9rem; color: var(--color-text-muted);">"Mild morning throbbing after gardening on weekend; resolved by midday with warm compress."</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- 4. LABS PANEL -->
+            <div class="dashboard-panel" id="panelLabs">
+              <div class="section-header" style="text-align: start; margin-bottom: var(--space-lg); max-width: 100%;">
+                <h2 style="font-size: var(--size-h3); margin-bottom: 4px; text-align: start;">Laboratory Serology & Biomarkers</h2>
+                <p style="text-align: start; margin-bottom: 0;">Records from Rheumora In-House Laboratory. Last blood draw: August 15, 2026.</p>
+              </div>
+
+              <div class="comparison-table-wrapper" style="margin-top: 0;">
+                <table class="comparison-table" style="text-align: start;">
+                  <thead>
+                    <tr>
+                      <th style="text-align: start;">Biomarker Test</th>
+                      <th>Result</th>
+                      <th>Reference Range</th>
+                      <th>Clinical Interpretation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>hs-CRP (High-Sensitivity C-Reactive Protein)</strong></td>
+                      <td><strong>1.4 mg/L</strong></td>
+                      <td>&lt; 3.0 mg/L</td>
+                      <td><span style="color: var(--color-success); font-weight: var(--weight-bold-inline);">Normal / Quiescent</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>ESR (Erythrocyte Sedimentation Rate)</strong></td>
+                      <td><strong>12 mm/hr</strong></td>
+                      <td>0 – 20 mm/hr</td>
+                      <td><span style="color: var(--color-success); font-weight: var(--weight-bold-inline);">Normal Baseline</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Anti-CCP Antibodies (IgG)</strong></td>
+                      <td><strong>48 U/mL</strong></td>
+                      <td>&lt; 20 U/mL</td>
+                      <td><span style="color: var(--color-warning); font-weight: var(--weight-bold-inline);">Seropositive (Stable)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Rheumatoid Factor (RF)</strong></td>
+                      <td><strong>34 IU/mL</strong></td>
+                      <td>&lt; 14 IU/mL</td>
+                      <td><span style="color: var(--color-warning); font-weight: var(--weight-bold-inline);">Mild Elevation</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>ALT / AST Liver Safety Panel</strong></td>
+                      <td><strong>22 / 19 U/L</strong></td>
+                      <td>7 – 45 U/L</td>
+                      <td><span style="color: var(--color-success); font-weight: var(--weight-bold-inline);">Hepatic Clearance Optimal</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 5. MEDICATIONS PANEL -->
+            <div class="dashboard-panel" id="panelMeds">
+              <div class="section-header" style="text-align: start; margin-bottom: var(--space-lg); max-width: 100%;">
+                <h2 style="font-size: var(--size-h3); margin-bottom: 4px; text-align: start;">Active Prescriptions & Biologics</h2>
+                <p style="text-align: start; margin-bottom: 0;">Current medication protocol approved by Dr. Evelyn Vance.</p>
+              </div>
+
+              <div class="card" style="align-items: flex-start; text-align: start; padding: var(--space-lg); margin-bottom: var(--space-md);">
+                <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 8px;">
+                  <h3 class="card-title" style="margin-bottom: 0;">Infliximab (Remicade) 300 mg IV</h3>
+                  <span class="section-badge" style="margin-bottom: 0; background: rgba(46, 139, 87, 0.1); color: var(--color-success);">Active Biologic</span>
+                </div>
+                <p style="margin-bottom: 8px;"><strong>Dosing Schedule:</strong> Administered every 8 weeks intravenously at Rheumora Infusion Suite.</p>
+                <p style="margin-bottom: 12px; font-size: 0.85rem; color: var(--color-text-muted);">Co-pay assistance active via Janssen CarePath. Covered by Blue Cross PPO.</p>
+                <button type="button" class="btn btn-secondary" onclick="alert('Biologic authorization is active through Dec 2026. Next order confirmed.');">
+                  <i class="ph ph-shield-check"></i> Authorization Status
+                </button>
+              </div>
+
+              <div class="card" style="align-items: flex-start; text-align: start; padding: var(--space-lg);">
+                <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 8px;">
+                  <h3 class="card-title" style="margin-bottom: 0;">Methotrexate 15 mg Weekly (Oral)</h3>
+                  <span class="section-badge" style="margin-bottom: 0;">Active DMARD</span>
+                </div>
+                <p style="margin-bottom: 8px;"><strong>Instructions:</strong> Take 6 tablets (2.5 mg each) once weekly on Sunday evenings with food.</p>
+                <p style="margin-bottom: 12px; font-size: 0.85rem; color: var(--color-text-muted);">Folic acid 1 mg daily taken on non-methotrexate days.</p>
+                <button type="button" class="btn btn-secondary" onclick="alert('Prescription refill request sent to CVS Pharmacy (Beacon St).');">
+                  <i class="ph ph-arrows-clockwise"></i> Request Pharmacy Refill
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;">
+            <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+            <span>Rheumora</span>
+          </a>
+          <p class="footer-desc">
+            A state-of-the-art center dedicated to transforming the diagnosis, biologic therapy, and sustained remission of autoimmune, arthritis, and connective tissue diseases.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Care Center</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Care Overview</a></li>
+            <li><a href="home2.html">Home 2 (Navigator)</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="about.html">About Medical Board</a></li>
+            <li><a href="dashboard.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Conditions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#ra">Rheumatoid Arthritis</a></li>
+            <li><a href="services.html#lupus">Systemic Lupus (SLE)</a></li>
+            <li><a href="services.html#psa">Psoriatic Arthritis</a></li>
+            <li><a href="services.html#infusion">Biologic Infusion Suites</a></li>
+            <li><a href="services.html#ultrasound">Musculoskeletal Ultrasound</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <ul class="footer-links">
+            <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
+            <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
+            <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon – Fri: 7:30 AM – 6:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 Rheumora Rheumatology & Autoimmune Care Center. All Rights Reserved. Medical advice disclaimer: Information provided is for educational purposes only.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigating Biologic Therapies in Early RA — Rheumora</title>
+  <meta name="description" content="A comprehensive clinical guide by Dr. Evelyn Vance on when to initiate biologic therapies in early rheumatoid arthritis to achieve sustained joint remission.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23184e5a'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-3H8v-2h3V8h2v3h3v2h-3z'/></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="logo" aria-label="Rheumora Homepage">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="services.html#conditions" class="nav-link">Conditions</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" id="desktopThemeToggle" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Slide Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="drawer-link"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
+      <li><a href="services.html#conditions" class="drawer-link"><i class="ph ph-dna" style="margin-inline-end: 10px;"></i> Conditions</a></li>
+      <li><a href="blog.html" class="drawer-link active"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ph ph-user-circle" style="margin-inline-end: 10px;"></i> Dashboard</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <div class="drawer-utility-row">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode">
+          <i class="ph ph-moon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent">
+
+    <article class="section" style="padding-top: var(--space-xl);">
+      <div class="container">
+        
+        <div class="blog-article">
+          
+          <!-- Article Header -->
+          <div style="margin-bottom: var(--space-lg); text-align: center;">
+            <a href="blog.html" style="display: inline-flex; align-items: center; gap: 6px; color: var(--color-primary); font-size: 0.9rem; font-weight: var(--weight-label); margin-bottom: 12px;">
+              <i class="ph ph-arrow-left"></i> Back to Knowledge Hub
+            </a>
+            
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; font-size: 0.85rem; color: var(--color-text-muted);">
+              <span class="blog-category-badge">Biologic Therapy</span>
+              <span>•</span>
+              <span>Published: September 12, 2026</span>
+              <span>•</span>
+              <span>6 min clinical read</span>
+            </div>
+
+            <h1 style="font-size: clamp(2.2rem, 4.2vw, 3.4rem); line-height: 1.15; margin-bottom: 16px;">
+              Navigating Biologic Therapies in Early Rheumatoid Arthritis: What Every Patient Should Know
+            </h1>
+
+            <div style="display: inline-flex; align-items: center; gap: 12px; margin-top: 8px;">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=120&q=80" alt="Dr. Evelyn Vance, MD" style="width: 50px; height: 50px; border-radius: var(--radius-global); object-fit: cover; border: 2px solid var(--color-primary);">
+              <div style="text-align: start;">
+                <div style="font-weight: var(--weight-btn); font-size: 0.95rem; color: var(--color-primary);">Dr. Evelyn Vance, MD, FACR</div>
+                <div style="font-size: 0.8rem; color: var(--color-text-muted);">Clinical Director & Research Fellow</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" alt="Clinician preparing targeted biologic infusion therapy" class="blog-article-hero">
+
+          <!-- Body Content -->
+          <div class="blog-content">
+            <p class="lead-text">
+              For individuals recently diagnosed with Rheumatoid Arthritis (RA), hearing the term "biologic infusion" can evoke feelings of uncertainty. However, in the modern rheumatology landscape, biologics represent one of the greatest therapeutic breakthroughs of our era—transforming RA from a progressive, disabling disease into a manageable, often silent condition.
+            </p>
+
+            <h2>The Critical "Window of Opportunity"</h2>
+            <p>
+              In clinical rheumatology, the first 12 weeks following the onset of persistent joint swelling are known as the <em>window of opportunity</em>. During this initial phase, the autoimmune cascade has not yet cemented itself into persistent bone remodeling.
+            </p>
+            <p>
+              When conventional synthetic DMARDs such as methotrexate provide inadequate response or intolerable GI side effects, delaying escalation can lead to microscopic bone erosions that standard plain X-rays cannot yet visualize.
+            </p>
+
+            <blockquote class="blog-callout">
+              "The modern paradigm is no longer 'wait and see if the joints degrade.' Our goal is strict clinical remission (DAS28 &lt; 2.6) achieved as swiftly and safely as possible."
+            </blockquote>
+
+            <h2>How Biologics Differ from Traditional Medications</h2>
+            <p>
+              Unlike broad immune-suppressing steroids or oral synthetic agents that affect the entire cellular system, biologics are genetically engineered protein therapeutics created in living cell cultures. They are designed like precision keys that match specific inflammatory locks:
+            </p>
+
+            <ul style="margin-bottom: var(--space-lg); padding-inline-start: 24px; color: var(--color-text);">
+              <li style="margin-bottom: 8px;"><strong>Anti-TNF Agents (Infliximab, Adalimumab, Etanercept):</strong> Neutralize Tumor Necrosis Factor, a major cytokine that signals synovial cells to proliferate and attack cartilage.</li>
+              <li style="margin-bottom: 8px;"><strong>Interleukin-6 Receptor Antagonists (Tocilizumab, Sarilumab):</strong> Block IL-6 pathways, rapidly normalizing elevated C-reactive protein (CRP) and resolving persistent morning stiffness.</li>
+              <li style="margin-bottom: 8px;"><strong>B-Cell Depleting Therapies (Rituximab):</strong> Target CD20-positive B-lymphocytes responsible for producing harmful autoantibodies such as Rheumatoid Factor and Anti-CCP.</li>
+              <li style="margin-bottom: 8px;"><strong>T-Cell Co-Stimulation Modulators (Abatacept):</strong> Prevent immune cells from fully activating and attacking healthy joint tissue.</li>
+            </ul>
+
+            <h2>Safety, Screening & Infusion Peace of Mind</h2>
+            <p>
+              Before starting any biologic agent, comprehensive screening protocols are performed. These include testing for latent tuberculosis (QuantiFERON gold), hepatitis serologies, and full blood counts. During infusion therapy at Rheumora, patients relax in heated private recliners under constant vital sign observation by dedicated rheumatology nurse specialists.
+            </p>
+
+            <!-- Clinical Author Card -->
+            <div class="author-bio-card" style="background-color: var(--color-surface-soft); border-radius: var(--radius-global); border: 1px solid var(--color-border); padding: var(--space-lg); margin-top: var(--space-2xl); display: flex; gap: 20px; align-items: center;">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=160&q=80" alt="Dr. Evelyn Vance" style="width: 80px; height: 80px; border-radius: var(--radius-global); object-fit: cover;">
+              <div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 4px;">About the Author: Dr. Evelyn Vance, MD, FACR</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 0;">
+                  Dr. Vance has over 20 years of clinical practice in academic and outpatient rheumatology. She serves on the American College of Rheumatology Clinical Quality Committee and directs the Biologic Infusion Suites at Rheumora.
+                </p>
+              </div>
+            </div>
+
+            <!-- Comment Form (Step 12: Client-side validation) -->
+            <div style="margin-top: var(--space-2xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+              <h3 style="margin-bottom: var(--space-xs);">Leave a Clinical Question or Comment</h3>
+              <p style="font-size: 0.9rem; margin-bottom: var(--space-md);">
+                Our medical team regularly reviews questions for inclusion in our monthly patient FAQ digest.
+              </p>
+
+              <form data-validate="true" data-success-msg="Thank you! Your comment has been submitted for clinical moderation.">
+                <div class="alert-box"></div>
+
+                <div class="grid grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="commName">Full Name <span class="required-star">*</span></label>
+                    <input type="text" id="commName" name="name" class="form-control" placeholder="Your name" required>
+                    <span class="form-error-msg"></span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="commEmail">Email Address <span class="required-star">*</span></label>
+                    <input type="email" id="commEmail" name="email" class="form-control" placeholder="your.email@example.com" required>
+                    <span class="form-error-msg"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="commMessage">Your Question or Comment <span class="required-star">*</span></label>
+                  <textarea id="commMessage" name="message" class="form-control" placeholder="Share your experience or question..." required></textarea>
+                  <span class="form-error-msg"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" data-original-text="Submit Comment">
+                  <i class="ph ph-chat-circle-dots"></i> Submit Comment
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;">
+            <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+            <span>Rheumora</span>
+          </a>
+          <p class="footer-desc">
+            A state-of-the-art center dedicated to transforming the diagnosis, biologic therapy, and sustained remission of autoimmune, arthritis, and connective tissue diseases.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Care Center</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Care Overview</a></li>
+            <li><a href="home2.html">Home 2 (Navigator)</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="about.html">About Medical Board</a></li>
+            <li><a href="dashboard.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Conditions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#ra">Rheumatoid Arthritis</a></li>
+            <li><a href="services.html#lupus">Systemic Lupus (SLE)</a></li>
+            <li><a href="services.html#psa">Psoriatic Arthritis</a></li>
+            <li><a href="services.html#infusion">Biologic Infusion Suites</a></li>
+            <li><a href="services.html#ultrasound">Musculoskeletal Ultrasound</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <ul class="footer-links">
+            <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
+            <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
+            <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon – Fri: 7:30 AM – 6:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 Rheumora Rheumatology & Autoimmune Care Center. All Rights Reserved. Medical advice disclaimer: Information provided is for educational purposes only.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Services & Biologic Infusion Suites — Rheumora</title>
+  <meta name="description" content="Explore Rheumora’s specialized clinical services: Biologic Infusion Suites, Musculoskeletal Ultrasound, Early Rheumatoid Arthritis, Lupus Care, and Bone Health.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23184e5a'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-3H8v-2h3V8h2v3h3v2h-3z'/></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="logo" aria-label="Rheumora Homepage">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="services.html#conditions" class="nav-link">Conditions</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" id="desktopThemeToggle" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Slide Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="drawer-link"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link active"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
+      <li><a href="services.html#conditions" class="drawer-link"><i class="ph ph-dna" style="margin-inline-end: 10px;"></i> Conditions</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ph ph-user-circle" style="margin-inline-end: 10px;"></i> Dashboard</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <div class="drawer-utility-row">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode">
+          <i class="ph ph-moon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent">
+
+    <!-- PAGE HEADER -->
+    <section class="section section-alt" style="padding-bottom: var(--space-2xl);">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <span class="section-badge"><i class="ph ph-first-aid"></i> Diagnostic & Therapeutic Care</span>
+          <h1 style="font-size: clamp(2.5rem, 5vw, 4.2rem); margin-bottom: var(--space-xs);">Clinical Specialties & Infusion Services</h1>
+          <p class="section-subtitle">
+            Every autoimmune condition presents differently. Our specialized clinics deliver targeted biologic therapies, precise imaging, and compassionate multidisciplinary support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED SERVICE CARDS GRID -->
+    <section class="section" id="conditions">
+      <div class="container">
+        
+        <div class="grid grid-3">
+          
+          <!-- RA -->
+          <article class="service-card" id="ra">
+            <div class="card-icon"><i class="ph ph-hand-heart"></i></div>
+            <h3 class="card-title">Rheumatoid Arthritis Clinic</h3>
+            <p class="card-text">
+              Targeted early suppression of synovial inflammation using next-generation targeted synthetic DMARDs (JAK inhibitors) and biologic TNF/IL-6 inhibitors. Our objective is strict clinical remission according to ACR/EULAR criteria.
+            </p>
+            <div style="width: 100%; border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: auto;">
+              <span style="font-size: 0.85rem; color: var(--color-secondary); font-weight: var(--weight-label);">
+                <i class="ph ph-check"></i> Point-of-care joint ultrasound included
+              </span>
+            </div>
+          </article>
+
+          <!-- Infusion -->
+          <article class="service-card" id="infusion">
+            <div class="card-icon"><i class="ph ph-drop"></i></div>
+            <h3 class="card-title">Biologic Infusion Suites</h3>
+            <p class="card-text">
+              Experience therapeutic intravenous infusions in private or semi-private bays featuring heated massage recliners, entertainment tablets, and dedicated 1-on-1 certified rheumatology infusion nursing.
+            </p>
+            <div style="width: 100%; border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: auto;">
+              <span style="font-size: 0.85rem; color: var(--color-secondary); font-weight: var(--weight-label);">
+                <i class="ph ph-check"></i> Infliximab, Rituximab, Tocilizumab & more
+              </span>
+            </div>
+          </article>
+
+          <!-- Lupus -->
+          <article class="service-card" id="lupus">
+            <div class="card-icon"><i class="ph ph-butterfly"></i></div>
+            <h3 class="card-title">Systemic Lupus & Sjögren’s</h3>
+            <p class="card-text">
+              Coordinated connective tissue management focusing on renal protection, anti-malarial optimization (hydroxychloroquine monitoring), B-lymphocyte stimulator inhibitors (Belimumab), and fatigue mitigation.
+            </p>
+            <div style="width: 100%; border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: auto;">
+              <span style="font-size: 0.85rem; color: var(--color-secondary); font-weight: var(--weight-label);">
+                <i class="ph ph-check"></i> Multi-organ screening & complement labs
+              </span>
+            </div>
+          </article>
+
+          <!-- Psoriatic -->
+          <article class="service-card" id="psa">
+            <div class="card-icon"><i class="ph ph-path"></i></div>
+            <h3 class="card-title">Psoriatic Arthritis & Spondyloarthritis</h3>
+            <p class="card-text">
+              Specialized treatment for enthesitis, dactylitis ("sausage fingers"), and axial sacroiliitis. We leverage IL-17 and IL-23 pathway inhibitors to simultaneously clear cutaneous plaques and arrest spinal stiffness.
+            </p>
+            <div style="width: 100%; border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: auto;">
+              <span style="font-size: 0.85rem; color: var(--color-secondary); font-weight: var(--weight-label);">
+                <i class="ph ph-check"></i> Joint & skin dual-endpoint monitoring
+              </span>
+            </div>
+          </article>
+
+          <!-- Ultrasound -->
+          <article class="service-card" id="ultrasound">
+            <div class="card-icon"><i class="ph ph-activity"></i></div>
+            <h3 class="card-title">Musculoskeletal Ultrasound (MSUS)</h3>
+            <p class="card-text">
+              High-frequency power Doppler ultrasound uncovers active hypervascular inflammation and cartilage erosions months before standard X-rays can detect changes. Also used for pinpoint-accurate aspiration and injections.
+            </p>
+            <div style="width: 100%; border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: auto;">
+              <span style="font-size: 0.85rem; color: var(--color-secondary); font-weight: var(--weight-label);">
+                <i class="ph ph-check"></i> Immediate real-time visualization
+              </span>
+            </div>
+          </article>
+
+          <!-- Osteoporosis -->
+          <article class="service-card" id="osteoporosis">
+            <div class="card-icon"><i class="ph ph-shield-check"></i></div>
+            <h3 class="card-title">Bone Mineral & Osteoporosis Clinic</h3>
+            <p class="card-text">
+              Evaluation for steroid-induced or post-menopausal bone density loss. We administer advanced bone-building anabolic agents (Teriparatide, Romosozumab) and antiresorptive therapies to safeguard skeletal resilience.
+            </p>
+            <div style="width: 100%; border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: auto;">
+              <span style="font-size: 0.85rem; color: var(--color-secondary); font-weight: var(--weight-label);">
+                <i class="ph ph-check"></i> Comprehensive FRAX risk modeling
+              </span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLINICAL CARE PLAN COMPARISON TABLE (Step 9.3) -->
+    <section class="section section-alt" id="comparisonSection">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-scales"></i> Treatment Pathways</span>
+          <h2 class="section-title">Care Pathway Comparison</h2>
+          <p class="section-subtitle">
+            Understand how our comprehensive diagnostic tiers, infusion options, and continuous remission monitoring protocols align with your health needs.
+          </p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table" aria-label="Comparison of clinical care pathways">
+            <thead>
+              <tr>
+                <th scope="col" style="min-width: 240px;">Clinical Feature</th>
+                <th scope="col">Diagnostic Consultation</th>
+                <th scope="col">Biologic Infusion Suite</th>
+                <th scope="col">Continuous Remission Protocol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Comprehensive Rheumatologist Evaluation (60 min)</td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+              </tr>
+              <tr>
+                <td>Point-of-Care Joint Ultrasound (Power Doppler)</td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-minus-circle table-cross"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+              </tr>
+              <tr>
+                <td>Same-Day In-House Biomarker Lab (ESR, hsCRP)</td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+              </tr>
+              <tr>
+                <td>Private Heated Infusion Suite with Dedicated RN</td>
+                <td><i class="ph ph-minus-circle table-cross"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+              </tr>
+              <tr>
+                <td>Biologic Co-pay & Insurance Appeals Concierge</td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+              </tr>
+              <tr>
+                <td>Direct Rapid Flare-Up Triage Hotline</td>
+                <td><i class="ph ph-minus-circle table-cross"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+              </tr>
+              <tr>
+                <td>Anti-Inflammatory Nutrition & Physical Therapy Co-Care</td>
+                <td>Optional Add-on</td>
+                <td><i class="ph ph-minus-circle table-cross"></i></td>
+                <td><i class="ph ph-check-circle table-check"></i></td>
+              </tr>
+              <tr>
+                <td>Action</td>
+                <td>
+                  <a href="contact.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">Book Intake</a>
+                </td>
+                <td>
+                  <a href="contact.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Transfer Care</a>
+                </td>
+                <td>
+                  <a href="contact.html" class="btn btn-accent" style="padding: 8px 16px; font-size: 0.85rem;">Enroll Today</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Unsure Which Diagnostic Protocol You Require?</h2>
+        <p>
+          Our clinical intake coordinators will review your referral, medical records, and current symptoms to match you with the appropriate specialist.
+        </p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-accent">
+            <i class="ph ph-phone-call"></i> Request Intake Coordination
+          </a>
+          <a href="about.html" class="btn btn-secondary">
+            <i class="ph ph-users"></i> Meet Our Medical Board
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;">
+            <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+            <span>Rheumora</span>
+          </a>
+          <p class="footer-desc">
+            A state-of-the-art center dedicated to transforming the diagnosis, biologic therapy, and sustained remission of autoimmune, arthritis, and connective tissue diseases.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Care Center</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Care Overview</a></li>
+            <li><a href="home2.html">Home 2 (Navigator)</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="about.html">About Medical Board</a></li>
+            <li><a href="dashboard.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Conditions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#ra">Rheumatoid Arthritis</a></li>
+            <li><a href="services.html#lupus">Systemic Lupus (SLE)</a></li>
+            <li><a href="services.html#psa">Psoriatic Arthritis</a></li>
+            <li><a href="services.html#infusion">Biologic Infusion Suites</a></li>
+            <li><a href="services.html#ultrasound">Musculoskeletal Ultrasound</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <ul class="footer-links">
+            <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
+            <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
+            <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon – Fri: 7:30 AM – 6:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 Rheumora Rheumatology & Autoimmune Care Center. All Rights Reserved. Medical advice disclaimer: Information provided is for educational purposes only.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

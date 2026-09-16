@@ -1,0 +1,125 @@
+/* ==========================================================================
+   RHEUMORA — RHEUMATOLOGY & AUTOIMMUNE CARE CENTER
+   RTL Overrides Stylesheet (Loaded only when dir="rtl" or .rtl)
+   ========================================================================== */
+
+[dir="rtl"], body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Step 5: Drawer slides from LEFT in RTL mode */
+[dir="rtl"] .mobile-drawer,
+body.rtl .mobile-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.2);
+}
+
+[dir="rtl"] .mobile-drawer.active,
+body.rtl .mobile-drawer.active {
+  transform: translateX(0);
+}
+
+/* Drawer active link padding flip */
+[dir="rtl"] .drawer-link:hover,
+[dir="rtl"] .drawer-link.active,
+body.rtl .drawer-link:hover,
+body.rtl .drawer-link.active {
+  padding-inline-start: 22px;
+  padding-inline-end: 16px;
+}
+
+/* Hero Floating Stats Card Position */
+[dir="rtl"] .floating-stat-card,
+body.rtl .floating-stat-card {
+  right: auto;
+  left: var(--space-lg);
+  text-align: right;
+}
+
+/* Split Hero (Home 2) */
+[dir="rtl"] .hero-split-text,
+body.rtl .hero-split-text {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-split-text h1,
+[dir="rtl"] .hero-split-text p,
+body.rtl .hero-split-text h1,
+body.rtl .hero-split-text p {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-split-text .hero-actions,
+body.rtl .hero-split-text .hero-actions {
+  justify-content: flex-start;
+}
+
+/* Interactive Joint Navigator Details */
+[dir="rtl"] .navigator-panel-details,
+body.rtl .navigator-panel-details {
+  text-align: right;
+}
+
+[dir="rtl"] .navigator-panel-details h3,
+[dir="rtl"] .navigator-panel-details p,
+body.rtl .navigator-panel-details h3,
+body.rtl .navigator-panel-details p {
+  text-align: right;
+}
+
+/* Blog Callout quote border */
+[dir="rtl"] .blog-callout,
+body.rtl .blog-callout {
+  border-left: none;
+  border-right: 4px solid var(--color-accent);
+  border-radius: var(--radius-global) 0 0 var(--radius-global);
+}
+
+/* Blog Content */
+[dir="rtl"] .blog-content h2,
+[dir="rtl"] .blog-content h3,
+[dir="rtl"] .blog-content p,
+body.rtl .blog-content h2,
+body.rtl .blog-content h3,
+body.rtl .blog-content p {
+  text-align: right;
+}
+
+/* Form alignment */
+[dir="rtl"] .form-group,
+body.rtl .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .form-checkbox-row,
+body.rtl .form-checkbox-row {
+  text-align: right;
+}
+
+/* Comparison Table First Column */
+[dir="rtl"] .comparison-table td:first-child,
+[dir="rtl"] .comparison-table th:first-child,
+body.rtl .comparison-table td:first-child,
+body.rtl .comparison-table th:first-child {
+  text-align: right;
+}
+
+/* Dashboard Sidebar Menu */
+[dir="rtl"] .dash-menu-btn,
+body.rtl .dash-menu-btn {
+  text-align: right;
+}
+
+[dir="rtl"] .kpi-card,
+body.rtl .kpi-card {
+  text-align: right;
+}
+
+/* Footer link hover animation direction */
+[dir="rtl"] .footer-links a:hover,
+body.rtl .footer-links a:hover {
+  padding-inline-start: 4px;
+}
