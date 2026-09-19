@@ -1460,10 +1460,23 @@ textarea.form-control {
 .auth-page-body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--color-bg);
   padding: var(--space-md);
+  position: relative;
+}
+
+.auth-page-actions {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  z-index: 10;
 }
 
 .auth-card {

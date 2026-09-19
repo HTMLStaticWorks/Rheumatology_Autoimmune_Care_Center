@@ -12,9 +12,9 @@ Write-Host "======================================================" -ForegroundC
 $requiredFiles = @(
   "index.html", "home2.html", "services.html", "about.html",
   "blog.html", "blog-single.html", "contact.html", "login.html",
-  "register.html", "dashboard.html", "404.html", "coming-soon.html",
+  "register.html", "404.html", "coming-soon.html",
   "assets\css\style.css", "assets\css\rtl.css",
-  "assets\js\main.js", "assets\js\dashboard.js", "README.md"
+  "assets\js\main.js", "README.md"
 )
 
 foreach ($f in $requiredFiles) {
@@ -107,16 +107,16 @@ Write-Host "`n--- Checking Auth Pages (Login / Register) Constraints ---" -Foreg
 $loginContent = Get-Content (Join-Path $dir "login.html") -Raw
 $regContent = Get-Content (Join-Path $dir "register.html") -Raw
 
-if ($loginContent.Contains("theme-toggle-btn") -or $loginContent.Contains("desktopThemeToggle")) {
-  $errors.Add("login.html: Theme toggle must NOT be present on auth pages (Step 6)")
+if ($loginContent.Contains("theme-toggle-btn") -and $loginContent.Contains("rtl-toggle-btn")) {
+  $passed.Add("login.html: Theme toggle and RTL toggle present")
 } else {
-  $passed.Add("login.html: No theme toggle present")
+  $errors.Add("login.html: Missing theme or RTL toggle")
 }
 
-if ($regContent.Contains("theme-toggle-btn") -or $regContent.Contains("desktopThemeToggle")) {
-  $errors.Add("register.html: Theme toggle must NOT be present on auth pages (Step 6)")
+if ($regContent.Contains("theme-toggle-btn") -and $regContent.Contains("rtl-toggle-btn")) {
+  $passed.Add("register.html: Theme toggle and RTL toggle present")
 } else {
-  $passed.Add("register.html: No theme toggle present")
+  $errors.Add("register.html: Missing theme or RTL toggle")
 }
 
 if ($loginContent.Contains("Return to Home") -or $loginContent.Contains("Back to Home")) {
@@ -139,7 +139,7 @@ if ($regContent.Contains("name=`"terms`"")) {
 
 # 6. FIXED NAVBAR MENU VERIFICATION (Step 4)
 Write-Host "`n--- Checking Fixed Menu Items in Standard Pages ---" -ForegroundColor Yellow
-$standardPages = @("index.html", "home2.html", "services.html", "about.html", "blog.html", "contact.html", "dashboard.html")
+$standardPages = @("index.html", "home2.html", "services.html", "about.html", "blog.html", "contact.html")
 
 foreach ($sp in $standardPages) {
   $pageContent = Get-Content (Join-Path $dir $sp) -Raw
@@ -149,11 +149,10 @@ foreach ($sp in $standardPages) {
   $hasServices = $pageContent.Contains("services.html")
   $hasBlog = $pageContent.Contains("blog.html")
   $hasContact = $pageContent.Contains("contact.html")
-  $hasDashboard = $pageContent.Contains("dashboard.html")
   $hasLogin = $pageContent.Contains(">Login</a>")
   
-  if ($hasHome -and $hasHome2 -and $hasServices -and $hasBlog -and $hasContact -and $hasDashboard -and $hasLogin) {
-    $passed.Add("$sp has all required fixed menu items (Home, Home 2, Services, Blog, Contact, Dashboard, Login)")
+  if ($hasHome -and $hasHome2 -and $hasServices -and $hasBlog -and $hasContact -and $hasLogin) {
+    $passed.Add("$sp has all required fixed menu items (Home, Home 2, Services, Blog, Contact, Login)")
   } else {
     $errors.Add("$sp is missing one or more fixed menu items")
   }
