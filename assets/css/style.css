@@ -1275,33 +1275,54 @@ strong, b {
 }
 
 .back-to-top {
-  display: flex;
-  background-color: var(--color-surface-soft);
-  color: var(--color-primary);
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #ffffff;
   border: 1px solid var(--color-border);
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-global);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   cursor: pointer;
-  transition: var(--transition-smooth);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .back-to-top:hover {
-  background-color: var(--color-primary);
-  color: #fff;
-  transform: translateY(-2px);
+  background-color: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] .back-to-top {
-  color: #eaf1f1;
+  background-color: #6ed0dc;
+  color: #0b181b;
 }
 
 [data-theme="dark"] .back-to-top:hover {
-  background-color: #6ed0dc;
+  background-color: #ffffff;
   color: #0b181b;
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 24px;
 }
 
 .footer-copyright {
@@ -2178,11 +2199,12 @@ textarea.form-control {
   .dashboard-sidebar { position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow-y: auto; z-index: 10; }
 }
 @media (max-width: 1024px) {
-  .dashboard-mobile-header { display: block; }
-  .dashboard-sidebar { position: fixed; top: 0; left: -320px; width: 300px; height: 100vh; z-index: 2000; overflow-y: auto; transition: left 0.3s ease; border-radius: 0; margin: 0; }
-  .dashboard-sidebar.active { left: 0; box-shadow: 5px 0 25px rgba(0,0,0,0.5); }
-  [dir="rtl"] .dashboard-sidebar { left: auto; right: -320px; transition: right 0.3s ease; }
-  [dir="rtl"] .dashboard-sidebar.active { right: 0; }
+  .dashboard-sidebar {
+    position: static;
+    width: 100%;
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-global);
+  }
 }
 
 
@@ -2215,5 +2237,104 @@ textarea.form-control {
 .dashboard-content-area {
   min-width: 0;
   width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   23. PASSWORD VISIBILITY TOGGLE EYE BUTTON
+   -------------------------------------------------------------------------- */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input-wrapper .form-control {
+  padding-inline-end: 44px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  inset-inline-end: 12px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: var(--transition-smooth);
+}
+
+.password-toggle-btn:hover {
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .password-toggle-btn:hover {
+  color: #6ed0dc;
+}
+
+/* --------------------------------------------------------------------------
+   24. AUTHENTICATION PAGES MOBILE LAYOUT FIXES
+   -------------------------------------------------------------------------- */
+.auth-remember-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  gap: 12px;
+}
+
+.auth-remember-row .form-checkbox-row {
+  margin-bottom: 0 !important;
+  justify-content: flex-start !important;
+  text-align: start !important;
+}
+
+.auth-forgot-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .auth-forgot-link {
+  color: #6ed0dc;
+}
+
+@media (max-width: 1024px) {
+  .auth-card .btn:not(.btn-icon-square),
+  .auth-card .social-auth-btn {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .auth-card .form-group {
+    text-align: start !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+  }
+
+  .auth-card .form-label {
+    text-align: start !important;
+    align-self: flex-start !important;
+    width: 100% !important;
+  }
+
+  .auth-remember-row {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .auth-remember-row .form-checkbox-row {
+    justify-content: flex-start !important;
+    text-align: start !important;
+  }
 }
 

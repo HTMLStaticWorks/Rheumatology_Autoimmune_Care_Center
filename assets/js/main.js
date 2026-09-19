@@ -451,10 +451,48 @@
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (!backToTopBtn) return;
 
-    backToTopBtn.addEventListener('click', () => {
+    function checkScroll() {
+      if (window.scrollY > 200) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll();
+
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 9. PASSWORD VISIBILITY TOGGLE (EYE ICON)
+  // --------------------------------------------------------------------------
+  function setupPasswordToggles() {
+    const toggleButtons = document.querySelectorAll('.password-toggle-btn');
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const wrapper = btn.closest('.password-input-wrapper');
+        if (!wrapper) return;
+        const input = wrapper.querySelector('input');
+        const icon = btn.querySelector('i');
+        if (!input) return;
+
+        if (input.type === 'password') {
+          input.type = 'text';
+          if (icon) icon.className = 'ph ph-eye-slash';
+          btn.setAttribute('aria-label', 'Hide password');
+        } else {
+          input.type = 'password';
+          if (icon) icon.className = 'ph ph-eye';
+          btn.setAttribute('aria-label', 'Show password');
+        }
       });
     });
   }
@@ -471,5 +509,6 @@
     setupJointNavigator();
     setupCountdown();
     setupBackToTop();
+    setupPasswordToggles();
   });
 })();

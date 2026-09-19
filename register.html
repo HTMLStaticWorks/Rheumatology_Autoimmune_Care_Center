@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create Patient Account — Rheumora</title>
+  <title>Create Patient Account â€” Rheumora</title>
   <meta name="description" content="Register for Rheumora Patient Portal to track autoimmune health biomarkers, request infusion visits, and stay connected with your rheumatologist.">
   
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23184e5a'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-3H8v-2h3V8h2v3h3v2h-3z'/></svg>">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -15,9 +15,6 @@
   <div class="auth-page-actions" style="position: absolute; inset-block-start: var(--space-md); inset-inline-end: var(--space-md); display: flex; gap: var(--space-xs); z-index: 10;">
     <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
       <i class="ph ph-arrows-left-right"></i>
-    </button>
-    <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
-      <i class="ph ph-moon"></i>
     </button>
   </div>
 
@@ -51,13 +48,23 @@
 
       <div class="form-group">
         <label class="form-label" for="regPassword">Password <span class="required-star">*</span></label>
-        <input type="password" id="regPassword" name="password" class="form-control" placeholder="Min. 8 characters" required autocomplete="new-password">
+        <div class="password-input-wrapper">
+          <input type="password" id="regPassword" name="password" class="form-control" placeholder="Min. 8 characters" required autocomplete="new-password">
+          <button type="button" class="password-toggle-btn" aria-label="Show password" title="Toggle password visibility">
+            <i class="ph ph-eye"></i>
+          </button>
+        </div>
         <span class="form-error-msg"></span>
       </div>
 
       <div class="form-group">
         <label class="form-label" for="regConfirmPassword">Confirm Password <span class="required-star">*</span></label>
-        <input type="password" id="regConfirmPassword" name="confirm_password" class="form-control" placeholder="Re-enter password" required autocomplete="new-password">
+        <div class="password-input-wrapper">
+          <input type="password" id="regConfirmPassword" name="confirm_password" class="form-control" placeholder="Re-enter password" required autocomplete="new-password">
+          <button type="button" class="password-toggle-btn" aria-label="Show password" title="Toggle password visibility">
+            <i class="ph ph-eye"></i>
+          </button>
+        </div>
         <span class="form-error-msg"></span>
       </div>
 
@@ -103,9 +110,14 @@
 
   </main>
 
+  <button id="backToTopBtn" class="btn-icon-square back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ph ph-caret-up"></i>
+  </button>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
 
 
 
