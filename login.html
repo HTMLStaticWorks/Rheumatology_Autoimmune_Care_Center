@@ -12,14 +12,22 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body class="auth-page-body">
+  <div class="auth-page-actions" style="position: absolute; inset-block-start: var(--space-md); inset-inline-end: var(--space-md); display: flex; gap: var(--space-xs); z-index: 10;">
+    <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+      <i class="ph ph-arrows-left-right"></i>
+    </button>
+    <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+      <i class="ph ph-moon"></i>
+    </button>
+  </div>
 
   <main class="auth-card">
     
     <!-- Logo -->
-    <div class="auth-logo">
+    <a href="index.html" class="auth-logo" style="text-decoration: none; color: inherit;">
       <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
       <span>Rheumora</span>
-    </div>
+    </a>
 
     <h1 class="auth-title">Patient & Clinician Portal</h1>
     <p class="auth-subtitle">Access your health records, lab biomarkers, and infusion bookings</p>
@@ -38,10 +46,16 @@
       <div class="form-group">
         <label class="form-label" for="loginPassword">
           <span>Password <span class="required-star">*</span></span>
-          <a href="#" style="font-size: 0.8rem; color: var(--color-primary); text-decoration: underline;" onclick="alert('Password reset link has been dispatched to your email address.'); return false;">Forgot?</a>
         </label>
         <input type="password" id="loginPassword" name="password" class="form-control" placeholder="Min. 8 characters" required autocomplete="current-password">
         <span class="form-error-msg"></span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 0.85rem;">
+          <div class="form-checkbox-row" style="margin-bottom: 0;">
+            <input type="checkbox" id="loginRemember" name="remember">
+            <label for="loginRemember" style="margin-bottom: 0;">Remember me</label>
+          </div>
+          <a href="#" style="color: var(--color-primary); text-decoration: underline;" onclick="alert('Password reset link has been dispatched to your email address.'); return false;">Forgot?</a>
+        </div>
       </div>
 
       <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;" data-original-text="Login">
@@ -84,3 +98,8 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

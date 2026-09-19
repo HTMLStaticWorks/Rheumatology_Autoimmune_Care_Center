@@ -129,6 +129,12 @@ body {
   flex-direction: column;
 }
 
+/* Utility to disable transitions during layout flips (RTL toggle) */
+.disable-transitions,
+.disable-transitions * {
+  transition: none !important;
+}
+
 img, svg, video {
   max-width: 100%;
   height: auto;
@@ -707,8 +713,8 @@ strong, b {
 .drawer-utility-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-xs);
+  justify-content: center;
+  gap: var(--space-md);
 }
 
 /* --------------------------------------------------------------------------
@@ -1041,6 +1047,14 @@ strong, b {
   font-weight: var(--weight-label);
 }
 
+.nav-detail-rec-heading {
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .nav-detail-rec-heading {
+  color: #6ed0dc;
+}
+
 [data-theme="dark"] .symptom-tag {
   color: #6ed0dc;
 }
@@ -1246,7 +1260,48 @@ strong, b {
 .footer-bottom {
   padding-top: var(--space-lg);
   border-top: 1px solid var(--color-border);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-md);
+  }
+}
+
+.back-to-top {
+  display: flex;
+  background-color: var(--color-surface-soft);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-global);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.back-to-top:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .back-to-top {
+  color: #eaf1f1;
+}
+
+[data-theme="dark"] .back-to-top:hover {
+  background-color: #6ed0dc;
+  color: #0b181b;
 }
 
 .footer-copyright {
@@ -1601,6 +1656,16 @@ textarea.form-control {
 
 [data-theme="dark"] .blog-card-title {
   color: #eaf1f1;
+}
+
+.blog-read-more {
+  color: var(--color-primary);
+  font-weight: var(--weight-btn);
+  font-size: 0.9rem;
+}
+
+[data-theme="dark"] .blog-read-more {
+  color: #6ed0dc;
 }
 
 .blog-article {
@@ -2000,7 +2065,7 @@ textarea.form-control {
     padding: 12px 20px !important;
     font-size: 0.95rem !important;
     font-weight: var(--weight-btn) !important;
-    display: inline-flex !important;
+    display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin-inline: auto !important;
@@ -2098,3 +2163,57 @@ textarea.form-control {
     margin-inline: auto !important;
   }
 }
+
+/* FAQ Accordion */
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary { list-style: none; outline: none; }
+.faq-item[open] summary .ph-caret-down { transform: rotate(180deg); }
+.faq-item summary i { transition: transform 0.3s ease; }
+[data-theme="dark"] .faq-item summary { color: #6ed0dc !important; }
+
+
+/* Dashboard Sidebar Responsive */
+.dashboard-mobile-header { display: none; }
+@media (min-width: 1025px) {
+  .dashboard-sidebar { position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow-y: auto; z-index: 10; }
+}
+@media (max-width: 1024px) {
+  .dashboard-mobile-header { display: block; }
+  .dashboard-sidebar { position: fixed; top: 0; left: -320px; width: 300px; height: 100vh; z-index: 2000; overflow-y: auto; transition: left 0.3s ease; border-radius: 0; margin: 0; }
+  .dashboard-sidebar.active { left: 0; box-shadow: 5px 0 25px rgba(0,0,0,0.5); }
+  [dir="rtl"] .dashboard-sidebar { left: auto; right: -320px; transition: right 0.3s ease; }
+  [dir="rtl"] .dashboard-sidebar.active { right: 0; }
+}
+
+
+@media (max-width: 1024px) {
+  #siteHeader .header-actions a.btn.btn-primary,
+  #siteHeader .header-actions .rtl-toggle-btn {
+    display: none !important;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid-3 > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    margin-inline: auto;
+    width: 100%;
+    max-width: calc(50% - (var(--space-lg) / 2));
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .dashboard-grid .card {
+    text-align: start !important;
+    align-items: flex-start !important;
+  }
+}
+
+
+.dashboard-content-area {
+  min-width: 0;
+  width: 100%;
+}
+

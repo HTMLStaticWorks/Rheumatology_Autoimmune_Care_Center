@@ -12,14 +12,22 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body class="auth-page-body">
+  <div class="auth-page-actions" style="position: absolute; inset-block-start: var(--space-md); inset-inline-end: var(--space-md); display: flex; gap: var(--space-xs); z-index: 10;">
+    <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+      <i class="ph ph-arrows-left-right"></i>
+    </button>
+    <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+      <i class="ph ph-moon"></i>
+    </button>
+  </div>
 
   <main class="auth-card">
     
     <!-- Logo -->
-    <div class="auth-logo">
+    <a href="index.html" class="auth-logo" style="text-decoration: none; color: inherit;">
       <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
       <span>Rheumora</span>
-    </div>
+    </a>
 
     <h1 class="auth-title">Create Patient Account</h1>
     <p class="auth-subtitle">Join the Rheumora digital portal for secure clinical care</p>
@@ -98,3 +106,8 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

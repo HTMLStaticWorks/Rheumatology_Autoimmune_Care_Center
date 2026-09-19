@@ -27,7 +27,7 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="home2.html" class="nav-link">Home 2</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="services.html#conditions" class="nav-link">Conditions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="contact.html" class="nav-link active">Contact</a></li>
           <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
@@ -70,7 +70,6 @@
       <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
       <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
       <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
-      <li><a href="services.html#conditions" class="drawer-link"><i class="ph ph-dna" style="margin-inline-end: 10px;"></i> Conditions</a></li>
       <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
       <li><a href="contact.html" class="drawer-link active"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
       <li><a href="dashboard.html" class="drawer-link"><i class="ph ph-user-circle" style="margin-inline-end: 10px;"></i> Dashboard</a></li>
@@ -205,14 +204,27 @@
                 Saturday (Infusion Suite Only): 8:00 AM – 2:00 PM<br>
                 Sunday: Closed (On-Call Nurse Triage Active)
               </p>
+              
+              <div class="social-media-links" style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--color-border); display: flex; gap: 12px; justify-content: center;">
+                <a href="#" class="btn-icon-square" aria-label="LinkedIn" title="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="#" class="btn-icon-square" aria-label="X" title="X"><i class="ph ph-x-logo"></i></a>
+                <a href="#" class="btn-icon-square" aria-label="Facebook" title="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                <a href="#" class="btn-icon-square" aria-label="Instagram" title="Instagram"><i class="ph ph-instagram-logo"></i></a>
+              </div>
             </div>
 
             <!-- Interactive Map Placeholder Box -->
             <div style="background: var(--color-surface); border-radius: var(--radius-global); border: 1px solid var(--color-border); box-shadow: var(--shadow-global); overflow: hidden;">
-              <div style="background: var(--color-surface-soft); height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; border-bottom: 1px solid var(--color-border);">
-                <i class="ph ph-map-pin" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 8px;"></i>
-                <strong style="color: var(--color-primary); font-size: 1.1rem;">Longwood Medical Area, Boston</strong>
-                <span style="font-size: 0.85rem; color: var(--color-text-muted);">Direct MBTA Green Line D-Branch Access • Valet Patient Drop-off</span>
+              <div style="height: 240px; border-bottom: 1px solid var(--color-border); filter: grayscale(0.2) contrast(1.1);">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.6208070845347!2d-71.10776782352525!3d42.33924767119293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3798cf0cf5b8d%3A0x6bba8dd7c0303b70!2sLongwood%20Medical%20Area%2C%20Boston%2C%20MA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
               </div>
               <div class="clinic-access-note" style="padding: 16px; font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">
                 <i class="ph ph-wheelchair" style="color: var(--color-secondary); margin-inline-end: 6px;"></i>
@@ -224,6 +236,32 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-question"></i> FAQ</span>
+          <h2>Frequently Asked Questions</h2>
+          <p class="section-subtitle">Find quick answers to common questions about appointments, insurance, and our clinical processes.</p>
+        </div>
+        
+        <div class="faq-accordion" style="max-width: 800px; margin-inline: auto; display: flex; flex-direction: column; gap: var(--space-md);">
+          <details class="faq-item" style="background: var(--color-surface); padding: var(--space-md); border-radius: var(--radius-global); border: 1px solid var(--color-border); box-shadow: var(--shadow-global);">
+            <summary style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: var(--weight-h3); color: var(--color-primary); cursor: pointer; display: flex; align-items: center; justify-content: space-between;">What insurances do you accept? <i class="ph ph-caret-down"></i></summary>
+            <p style="margin-top: var(--space-sm); color: var(--color-text-muted); font-size: 0.95rem;">We accept Medicare and most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, and UnitedHealthcare. Please contact our billing coordinator prior to your first appointment for verification.</p>
+          </details>
+          <details class="faq-item" style="background: var(--color-surface); padding: var(--space-md); border-radius: var(--radius-global); border: 1px solid var(--color-border); box-shadow: var(--shadow-global);">
+            <summary style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: var(--weight-h3); color: var(--color-primary); cursor: pointer; display: flex; align-items: center; justify-content: space-between;">Do I need a referral to schedule an appointment? <i class="ph ph-caret-down"></i></summary>
+            <p style="margin-top: var(--space-sm); color: var(--color-text-muted); font-size: 0.95rem;">If your insurance plan is an HMO, you will likely need a referral from your Primary Care Physician. For PPO plans, a referral is typically not required. However, we do ask for your relevant medical records to ensure comprehensive care.</p>
+          </details>
+          <details class="faq-item" style="background: var(--color-surface); padding: var(--space-md); border-radius: var(--radius-global); border: 1px solid var(--color-border); box-shadow: var(--shadow-global);">
+            <summary style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: var(--weight-h3); color: var(--color-primary); cursor: pointer; display: flex; align-items: center; justify-content: space-between;">What should I bring to my first appointment? <i class="ph ph-caret-down"></i></summary>
+            <p style="margin-top: var(--space-sm); color: var(--color-text-muted); font-size: 0.95rem;">Please bring your photo ID, insurance card, a list of current medications, any recent lab results or imaging reports (X-rays, MRIs), and your completed patient intake forms.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -244,7 +282,7 @@
           </p>
           <div class="footer-social-row">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X"><i class="ph ph-x-logo"></i></a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
           </div>
@@ -288,6 +326,9 @@
         <p class="footer-copyright">
           &copy; 2026 Rheumora Rheumatology & Autoimmune Care Center. All Rights Reserved. Medical advice disclaimer: Information provided is for educational purposes only.
         </p>
+        <button id="backToTopBtn" class="btn-icon-square back-to-top" aria-label="Back to top" title="Back to top">
+          <i class="ph ph-caret-up"></i>
+        </button>
       </div>
     </div>
   </footer>
@@ -295,3 +336,7 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+

@@ -64,6 +64,8 @@
   }
 
   function applyDirection(dir) {
+    document.body.classList.add('disable-transitions');
+
     if (dir === 'rtl') {
       document.documentElement.setAttribute('dir', 'rtl');
       document.body.classList.add('rtl');
@@ -71,6 +73,14 @@
       document.documentElement.setAttribute('dir', 'ltr');
       document.body.classList.remove('rtl');
     }
+    
+    // Force reflow to apply the CSS changes immediately without transition
+    void document.body.offsetHeight;
+
+    setTimeout(() => {
+      document.body.classList.remove('disable-transitions');
+    }, 50);
+
     localStorage.setItem(RTL_STORAGE_KEY, dir);
   }
 
@@ -435,6 +445,21 @@
   }
 
   // --------------------------------------------------------------------------
+  // 8. BACK TO TOP BUTTON
+  // --------------------------------------------------------------------------
+  function setupBackToTop() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (!backToTopBtn) return;
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
   // DOM READY INITIALIZATION
   // --------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
@@ -445,5 +470,6 @@
     setupFormValidation();
     setupJointNavigator();
     setupCountdown();
+    setupBackToTop();
   });
 })();

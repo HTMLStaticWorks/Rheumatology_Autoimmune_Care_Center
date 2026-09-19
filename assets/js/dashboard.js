@@ -87,5 +87,29 @@
         apptForm.reset();
       });
     }
+
+    // Dashboard Mobile Sidebar Toggle
+    const dashSidebarToggleBtn = document.getElementById('dashSidebarToggleBtn');
+    const dashboardSidebar = document.getElementById('dashboardSidebar');
+
+    if (dashSidebarToggleBtn && dashboardSidebar) {
+      dashSidebarToggleBtn.addEventListener('click', () => {
+        dashboardSidebar.classList.toggle('active');
+      });
+      
+      // Close sidebar when clicking a menu link on mobile
+      menuButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (window.innerWidth <= 1024) {
+            dashboardSidebar.classList.remove('active');
+          }
+        });
+      });
+    }
+
   });
 })();
+
+
+
+
