@@ -1466,17 +1466,31 @@ textarea.form-control {
   background-color: var(--color-bg);
   padding: var(--space-md);
   position: relative;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .auth-page-actions {
-  width: 100%;
-  max-width: 460px;
+  position: fixed;
+  top: var(--space-md);
+  inset-inline-end: var(--space-md);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: var(--space-xs);
-  margin-bottom: var(--space-sm);
-  z-index: 10;
+  z-index: 100;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .auth-page-body {
+    padding-top: calc(var(--space-xl) + 20px);
+  }
+  .auth-page-actions {
+    top: var(--space-sm);
+    inset-inline-end: var(--space-sm);
+  }
 }
 
 .auth-card {
@@ -1491,6 +1505,8 @@ textarea.form-control {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .auth-logo {
@@ -1945,9 +1961,14 @@ textarea.form-control {
     display: none !important; /* Step 4: No horizontal nav at <= 1024px */
   }
 
-  .header-actions .btn-primary,
+  .header-actions .btn-primary {
+    display: none !important;
+  }
+
+  .header-actions .rtl-toggle-btn,
+  .header-actions .theme-toggle-btn,
   .header-actions #desktopThemeToggle {
-    display: none !important; /* Step 6: Theme toggle hidden from header, placed inside drawer */
+    display: inline-flex !important;
   }
 
   .hamburger-btn {
@@ -2038,12 +2059,25 @@ textarea.form-control {
   .blog-card,
   .footer-col,
   .footer-bottom,
-  .auth-card,
-  .form-group,
-  .form-label {
+  .auth-card {
     text-align: center !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+
+  .form-group {
+    text-align: start !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  .form-label {
+    text-align: start !important;
+    align-self: flex-start !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
   }
 
   .section-badge,
@@ -2081,15 +2115,14 @@ textarea.form-control {
   }
 
   /* 2. BUTTONS: EXACT SAME UNIFORM SIZE IN TAB AND MOBILE VIEW */
-  .btn:not(.btn-icon-square):not(.hamburger-btn):not(.drawer-close-btn),
+  .btn:not(.btn-icon-square):not(.hamburger-btn):not(.drawer-close-btn):not(.auth-submit-btn),
   .hero-actions .btn,
   .cta-actions .btn,
   .service-card .btn,
-  .card .btn,
+  .card:not(.auth-card) .btn,
   .team-card .btn,
   .navigator-panel-details .btn,
-  form .btn,
-  .social-auth-btn {
+  form:not(.auth-form) .btn {
     width: 280px !important;
     min-width: 280px !important;
     max-width: 100% !important;
@@ -2180,12 +2213,12 @@ textarea.form-control {
   }
 
   /* Exact same button size on 360px mobile view */
-  .btn:not(.btn-icon-square):not(.hamburger-btn):not(.drawer-close-btn),
+  .btn:not(.btn-icon-square):not(.hamburger-btn):not(.drawer-close-btn):not(.auth-submit-btn),
   .hero-actions .btn,
   .cta-actions .btn,
   .service-card .btn,
-  .card .btn,
-  form .btn {
+  .card:not(.auth-card) .btn,
+  form:not(.auth-form) .btn {
     width: 280px !important;
     min-width: 280px !important;
     max-width: 100% !important;
@@ -2222,9 +2255,37 @@ textarea.form-control {
 
 
 @media (max-width: 1024px) {
-  #siteHeader .header-actions a.btn.btn-primary,
-  #siteHeader .header-actions .rtl-toggle-btn {
+  #siteHeader .header-actions a.btn.btn-primary {
     display: none !important;
+  }
+  #siteHeader .header-actions .rtl-toggle-btn,
+  #siteHeader .header-actions .theme-toggle-btn,
+  #siteHeader .header-actions #desktopThemeToggle {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding-inline: 12px;
+  }
+  .header-actions {
+    gap: 6px;
+  }
+  .header-actions .btn-icon-square,
+  .header-actions .hamburger-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+  .logo {
+    font-size: 1.4rem;
+    gap: 8px;
+  }
+  .logo-symbol {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
   }
 }
 
@@ -2293,61 +2354,331 @@ textarea.form-control {
    24. AUTHENTICATION PAGES MOBILE LAYOUT FIXES
    -------------------------------------------------------------------------- */
 .auth-remember-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 14px;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: 6px;
+  margin-bottom: 14px;
   font-size: 0.85rem;
-  gap: 12px;
+  gap: 8px;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
 }
 
 .auth-remember-row .form-checkbox-row {
+  display: inline-flex !important;
+  align-items: center !important;
   margin-bottom: 0 !important;
   justify-content: flex-start !important;
   text-align: start !important;
+  gap: 6px !important;
+  width: auto !important;
+  max-width: none !important;
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+
+.auth-remember-row .form-checkbox-row label {
+  margin-bottom: 0 !important;
+  white-space: nowrap !important;
+  font-size: 0.85rem !important;
+  cursor: pointer;
+}
+
+.auth-remember-row .form-checkbox-row input[type="checkbox"] {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  width: 16px;
+  height: 16px;
 }
 
 .auth-forgot-link {
   color: var(--color-primary);
   text-decoration: underline;
-  white-space: nowrap;
+  white-space: nowrap !important;
+  width: auto !important;
+  max-width: none !important;
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  font-size: 0.85rem !important;
+  text-align: end !important;
+  margin-inline-start: auto !important;
 }
 
 [data-theme="dark"] .auth-forgot-link {
   color: #6ed0dc;
 }
 
+.auth-page-body {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.auth-form {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Authentication Submit Button and Google Button: Full width, exactly 50px high */
+.auth-card .btn,
+.auth-card .btn.btn-primary,
+.auth-card .auth-submit-btn,
+.auth-form .btn,
+.auth-form .auth-submit-btn,
+.auth-card .social-auth-btn,
+.auth-form .social-auth-btn,
+.social-auth-btn {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-inline: 0 !important;
+  padding: 12px 16px !important;
+  border-radius: var(--radius-global) !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
 @media (max-width: 1024px) {
-  .auth-card .btn:not(.btn-icon-square),
-  .auth-card .social-auth-btn {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .auth-card .form-group {
+  .auth-card .form-group,
+  .auth-form .form-group {
     text-align: start !important;
-    align-items: flex-start !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
     width: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  .auth-card .form-label {
+  .auth-card .form-label,
+  .auth-form .form-label,
+  .form-label {
     text-align: start !important;
     align-self: flex-start !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  .auth-card .form-label span,
+  .auth-form .form-label span {
+    text-align: start !important;
+  }
+
+  /* Standalone checkbox rows (e.g. Terms & Conditions) */
+  .auth-card > .auth-form > .form-checkbox-row,
+  .auth-form > .form-checkbox-row {
+    text-align: start !important;
+    justify-content: flex-start !important;
     width: 100% !important;
   }
 
   .auth-remember-row {
+    display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
     width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    gap: 8px !important;
   }
 
   .auth-remember-row .form-checkbox-row {
+    display: inline-flex !important;
+    align-items: center !important;
     justify-content: flex-start !important;
     text-align: start !important;
+    gap: 6px !important;
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    margin-bottom: 0 !important;
+  }
+
+  .auth-remember-row .form-checkbox-row label {
+    white-space: nowrap !important;
+    margin-bottom: 0 !important;
+    cursor: pointer;
+  }
+
+  .auth-remember-row .form-checkbox-row input[type="checkbox"] {
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .auth-forgot-link {
+    white-space: nowrap !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    text-align: end !important;
+    margin-inline-start: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-page-body {
+    padding-inline: 16px !important;
+    padding-top: calc(var(--space-xl) + 20px) !important;
+    padding-bottom: var(--space-lg) !important;
+  }
+
+  .auth-card {
+    padding: 28px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-page-body {
+    padding-inline: 12px !important;
+    padding-top: calc(var(--space-xl) + 16px) !important;
+    padding-bottom: var(--space-md) !important;
+  }
+
+  .auth-card {
+    padding: 24px 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .auth-title {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .auth-subtitle {
+    font-size: 0.8rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  .auth-logo {
+    font-size: 1.45rem !important;
+  }
+
+  .auth-remember-row {
+    font-size: 0.8rem !important;
+    gap: 6px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-top: 4px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .auth-remember-row .form-checkbox-row {
+    gap: 5px !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  .auth-remember-row .form-checkbox-row label,
+  .auth-forgot-link {
+    font-size: 0.8rem !important;
+  }
+
+  .auth-forgot-link {
+    white-space: nowrap !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    text-align: end !important;
+    margin-inline-start: auto !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-page-body {
+    padding-inline: 10px !important;
+    padding-top: calc(var(--space-xl) + 12px) !important;
+    padding-bottom: var(--space-sm) !important;
+  }
+
+  .auth-card {
+    padding: 20px 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .auth-card .form-group {
+    margin-bottom: 10px !important;
+  }
+
+  .auth-remember-row {
+    font-size: 0.76rem !important;
+    gap: 4px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-top: 4px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .auth-remember-row .form-checkbox-row {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    gap: 4px !important;
+  }
+
+  .auth-remember-row .form-checkbox-row input[type="checkbox"] {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .auth-remember-row .form-checkbox-row label {
+    font-size: 0.76rem !important;
+    white-space: nowrap !important;
+  }
+
+  .auth-forgot-link {
+    font-size: 0.76rem !important;
+    white-space: nowrap !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    text-align: end !important;
+    margin-inline-start: auto !important;
   }
 }
 

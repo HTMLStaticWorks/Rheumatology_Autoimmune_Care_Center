@@ -54,16 +54,17 @@
           </button>
         </div>
         <span class="form-error-msg"></span>
-        <div class="auth-remember-row">
-          <div class="form-checkbox-row">
-            <input type="checkbox" id="loginRemember" name="remember">
-            <label for="loginRemember">Remember me</label>
-          </div>
-          <a href="#" class="auth-forgot-link" onclick="alert('Password reset link has been dispatched to your email address.'); return false;">Forgot Password?</a>
-        </div>
       </div>
 
-      <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;" data-original-text="Login">
+      <div class="auth-remember-row">
+        <div class="form-checkbox-row">
+          <input type="checkbox" id="loginRemember" name="remember">
+          <label for="loginRemember">Remember me</label>
+        </div>
+        <a href="#" class="auth-forgot-link" onclick="alert('Password reset link has been dispatched to your email address.'); return false;">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary auth-submit-btn" style="width: 100%; margin-top: 8px;" data-original-text="Login">
         Login
       </button>
 
