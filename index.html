@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rheumora â€” Rheumatology & Autoimmune Care Center</title>
+  <title>Rheumora | Rheumatology &amp; Autoimmune Care Center</title>
   <meta name="description" content="Rheumora is a premier Rheumatology and Autoimmune Care Center delivering state-of-the-art biologic therapies, early arthritis diagnostics, and compassionate patient care.">
   
   <!-- Favicon / Brand Symbol -->
@@ -39,9 +39,27 @@
 </head>
 <body>
 
+  <!-- Top Clinical Information & Quick Direct Actions Bar -->
+  <aside class="top-clinic-bar" aria-label="Clinical Hours and Direct Actions">
+    <div class="top-clinic-bar-inner">
+      <div class="top-clinic-badge">
+        <i class="ph ph-shield-check"></i>
+        <span>Accredited Autoimmune &amp; Biologic Center | Direct Nurse Triage Available</span>
+      </div>
+      <div class="top-clinic-contacts">
+        <a href="tel:+18007438667" class="top-clinic-link">
+          <i class="ph ph-phone"></i> +1 (800) 743-8667
+        </a>
+        <a href="contact.html" class="top-clinic-cta-enquire">
+          <i class="ph ph-chat-circle-dots"></i> Enquire Now
+        </a>
+      </div>
+    </div>
+  </aside>
+
   <!-- ========================================================================
        SITE HEADER / NAVBAR (Step 4 & Step 6)
-       > 1024px: Full horizontal navbar | â‰¤ 1024px: Hamburger + Slide Drawer
+       > 1024px: Full horizontal navbar | <= 1024px: Hamburger + Slide Drawer
        ======================================================================== -->
   <header class="site-header" id="siteHeader">
     <div class="header-container">
@@ -57,7 +75,8 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="home2.html" class="nav-link">Home 2</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="services.html" class="nav-link">Conditions Treated</a></li>
+          <li><a href="doctors.html" class="nav-link">Doctors</a></li>
           <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -66,7 +85,7 @@
 
       <!-- Header Actions Right -->
       <div class="header-actions">
-        <!-- RTL Toggle Button (Icon Only: â‡†) -->
+        <!-- RTL Toggle Button (Icon Only) -->
         <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
           <i class="ph ph-arrows-left-right"></i>
         </button>
@@ -79,7 +98,7 @@
         <!-- Login Button (Step 4: labeled exactly "Login") -->
         <a href="login.html" class="btn btn-primary">Login</a>
 
-        <!-- Hamburger Trigger (Shown at â‰¤ 1024px) -->
+        <!-- Hamburger Trigger (Shown at <= 1024px) -->
         <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu">
           <i class="ph ph-list"></i>
         </button>
@@ -91,7 +110,7 @@
   <!-- Mobile Drawer Backdrop -->
   <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
 
-  <!-- Mobile Slide Drawer (â‰¤ 1024px) -->
+  <!-- Mobile Slide Drawer (<= 1024px) -->
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
       <a href="index.html" class="logo">
@@ -106,7 +125,8 @@
     <ul class="drawer-nav">
       <li><a href="index.html" class="drawer-link active"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
       <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
-      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Conditions Treated</a></li>
+      <li><a href="doctors.html" class="drawer-link"><i class="ph ph-users-three" style="margin-inline-end: 10px;"></i> Doctors</a></li>
       <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
       <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
       <li><a href="contact.html" class="drawer-link"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
@@ -154,7 +174,10 @@
 
           <div class="hero-actions">
             <a href="contact.html" class="btn btn-primary">
-              <i class="ph ph-calendar-check"></i> Schedule Clinical Consultation
+              <i class="ph ph-calendar-check"></i> Book Appointment
+            </a>
+            <a href="contact.html#consultationForm" class="btn btn-accent">
+              <i class="ph ph-chat-circle-dots"></i> Enquire with Care Team
             </a>
             <a href="services.html" class="btn btn-secondary">
               <i class="ph ph-stethoscope"></i> Explore Specialized Care
@@ -202,7 +225,130 @@
       </div>
     </section>
 
-    <!-- 2. SERVICES SECTION (Card Grid - Step 3 & Step 9.1) -->
+    <!-- 2. CONNECTED PATIENT JOURNEY FLOW (Step 1 -> Step 2 -> Step 3 -> Step 4) -->
+    <section class="section patient-journey-section" id="patientJourney">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-path"></i> Connected Patient Journey</span>
+          <h2 class="section-title">Your 4-Phase Care Journey from Flare to Remission</h2>
+          <p class="section-subtitle">
+            A seamless medical pathway connecting symptom understanding, targeted clinical therapies, direct consultation with world-class rheumatologists, and priority booking.
+          </p>
+        </div>
+
+        <div class="journey-steps-grid">
+          
+          <!-- Step 1: Understanding Patient -->
+          <article class="journey-step-card">
+            <div class="journey-step-header">
+              <span class="journey-step-num">STEP 01</span>
+              <span class="journey-step-badge">Deep Listening</span>
+            </div>
+            <div class="journey-step-media">
+              <img src="assets/images/journey-step-1.jpg" alt="Rheumatologist listening with empathy to patient describing joint symptoms" class="journey-step-img" loading="lazy">
+              <div class="journey-step-icon-badge">
+                <i class="ph ph-hand-heart"></i>
+              </div>
+            </div>
+            <h3 class="journey-step-title">Understanding Patient</h3>
+            <p class="journey-step-desc">
+              We listen deeply to your symptom timeline, morning stiffness duration, joint swelling patterns, and prior laboratory tests to map your specific autoimmune profile.
+            </p>
+            <div class="journey-step-action">
+              <a href="#careSpecialties" class="btn btn-secondary">
+                <i class="ph ph-magnifying-glass"></i> Explore Symptoms
+              </a>
+              <span class="journey-next-indicator">
+                <span>Phase 2: Targeted Care</span> <i class="ph ph-arrow-down"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Step 2: Exploring Related Services -->
+          <article class="journey-step-card">
+            <div class="journey-step-header">
+              <span class="journey-step-num">STEP 02</span>
+              <span class="journey-step-badge">Specialized Care</span>
+            </div>
+            <div class="journey-step-media">
+              <img src="assets/images/journey-step-2.jpg" alt="Biologic infusion suites with comfortable recliners and modern IV therapy" class="journey-step-img" loading="lazy">
+              <div class="journey-step-icon-badge">
+                <i class="ph ph-flask"></i>
+              </div>
+            </div>
+            <h3 class="journey-step-title">Exploring Services</h3>
+            <p class="journey-step-desc">
+              Discover targeted biologic infusion suites, ultrasound-guided synovial treatments, and individualized protocols for RA, Lupus, Psoriatic Arthritis, and Bone Health.
+            </p>
+            <div class="journey-step-action">
+              <a href="#careSpecialties" class="btn btn-secondary">
+                <i class="ph ph-stethoscope"></i> Browse Therapies
+              </a>
+              <span class="journey-next-indicator">
+                <span>Phase 3: Specialist Faculty</span> <i class="ph ph-arrow-down"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Step 3: Meeting the Doctors -->
+          <article class="journey-step-card">
+            <div class="journey-step-header">
+              <span class="journey-step-num">STEP 03</span>
+              <span class="journey-step-badge">Medical Board</span>
+            </div>
+            <div class="journey-step-media">
+              <img src="assets/images/journey-step-3.jpg" alt="Board-certified team of rheumatologists and autoimmune specialists" class="journey-step-img" loading="lazy">
+              <div class="journey-step-icon-badge">
+                <i class="ph ph-users-three"></i>
+              </div>
+            </div>
+            <h3 class="journey-step-title">Meeting the Doctors</h3>
+            <p class="journey-step-desc">
+              Get evaluated directly by Harvard and Johns Hopkins trained rheumatologists and musculoskeletal ultrasound fellows who partner with you for life.
+            </p>
+            <div class="journey-step-action">
+              <a href="#specialistsTeam" class="btn btn-secondary">
+                <i class="ph ph-identification-card"></i> Meet Our Doctors
+              </a>
+              <span class="journey-next-indicator">
+                <span>Phase 4: Priority Intake</span> <i class="ph ph-arrow-down"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Step 4: Booking an Appointment -->
+          <article class="journey-step-card">
+            <div class="journey-step-header">
+              <span class="journey-step-num">STEP 04</span>
+              <span class="journey-step-badge">14-Day Guarantee</span>
+            </div>
+            <div class="journey-step-media">
+              <img src="assets/images/journey-step-4.jpg" alt="Patient intake navigator consulting and booking priority appointment" class="journey-step-img" loading="lazy">
+              <div class="journey-step-icon-badge">
+                <i class="ph ph-calendar-check"></i>
+              </div>
+            </div>
+            <h3 class="journey-step-title">Booking Appointment</h3>
+            <p class="journey-step-desc">
+              Fast-track your intake within 14 days. Dedicated navigators manage insurance authorizations so you can focus entirely on achieving lasting remission.
+            </p>
+            <div class="journey-step-action">
+              <a href="contact.html" class="btn btn-primary">
+                <i class="ph ph-calendar-plus"></i> Book Appointment
+              </a>
+              <a href="contact.html#consultationForm" class="btn btn-accent">
+                <i class="ph ph-chat-circle-dots"></i> Quick Enquiry
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION (Card Grid with Images & Dual CTAs) -->
     <section class="section" id="careSpecialties">
       <div class="container">
         
@@ -210,70 +356,227 @@
           <span class="section-badge"><i class="ph ph-stethoscope"></i> Specialized Therapies</span>
           <h2 class="section-title">Comprehensive Rheumatology & Autoimmune Care</h2>
           <p class="section-subtitle">
-            From precision biologic infusions to advanced musculoskeletal diagnostics, our therapeutic pathways are customized to each patientâ€™s unique immune profile.
+            From precision biologic infusions to advanced musculoskeletal diagnostics, our therapeutic pathways are customized to each patient's unique immune profile.
           </p>
         </div>
 
         <div class="grid grid-3">
           
           <!-- Card 1 -->
-          <article class="service-card">
-            <div class="card-icon"><i class="ph ph-hand-heart"></i></div>
-            <h3 class="card-title">Rheumatoid Arthritis</h3>
-            <p class="card-text">
-              Early aggressive intervention protocols utilizing targeted DMARDs and biologic modulators to eliminate morning stiffness, alleviate pain, and prevent joint damage.
-            </p>
-            <a href="services.html#ra" class="btn btn-secondary">Learn Pathway</a>
+          <article class="service-card has-image">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Rheumatologist examining joint flexibility for rheumatoid arthritis" class="service-card-img" loading="lazy">
+              <span class="service-category-tag">Early Synovial Care</span>
+              <div class="service-badge-overlay" title="Rheumatoid Arthritis Specialty">
+                <i class="ph ph-hand-heart"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="card-title">Rheumatoid Arthritis</h3>
+              <p class="card-text">
+                Early aggressive intervention protocols utilizing targeted DMARDs and biologic modulators to eliminate morning stiffness, alleviate pain, and prevent joint damage.
+              </p>
+              <div class="card-cta-group">
+                <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Appt</a>
+                <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+              </div>
+              <a href="services.html#ra" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem; color: var(--color-primary); margin-top: 10px; font-weight: var(--weight-label);">
+                <span>Explore RA Protocol</span> <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
           </article>
 
           <!-- Card 2 -->
-          <article class="service-card">
-            <div class="card-icon"><i class="ph ph-drop"></i></div>
-            <h3 class="card-title">Biologic Infusion Suites</h3>
-            <p class="card-text">
-              On-site, comfortable infusion suites staffed by rheumatology-certified nurse specialists for anti-TNF, anti-IL-6, and B-cell targeted intravenous therapies.
-            </p>
-            <a href="services.html#infusion" class="btn btn-secondary">Infusion Protocol</a>
+          <article class="service-card has-image">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Specialist preparing IV biologic infusion therapy" class="service-card-img" loading="lazy">
+              <span class="service-category-tag">IV Biologic Suite</span>
+              <div class="service-badge-overlay" title="Biologic Infusion Suites">
+                <i class="ph ph-drop"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="card-title">Biologic Infusion Suites</h3>
+              <p class="card-text">
+                On-site, comfortable infusion suites staffed by rheumatology-certified nurse specialists for anti-TNF, anti-IL-6, and B-cell targeted intravenous therapies.
+              </p>
+              <div class="card-cta-group">
+                <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Appt</a>
+                <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+              </div>
+              <a href="services.html#infusion" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem; color: var(--color-primary); margin-top: 10px; font-weight: var(--weight-label);">
+                <span>View Infusion Amenities</span> <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
           </article>
 
           <!-- Card 3 -->
-          <article class="service-card">
-            <div class="card-icon"><i class="ph ph-butterfly"></i></div>
-            <h3 class="card-title">Lupus & Connective Tissue</h3>
-            <p class="card-text">
-              Specialized management of Systemic Lupus Erythematosus (SLE), SjÃ¶grenâ€™s syndrome, scleroderma, and mixed connective tissue disease with multi-organ protection.
-            </p>
-            <a href="services.html#lupus" class="btn btn-secondary">Care Overview</a>
+          <article class="service-card has-image">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Specialized diagnostic testing for systemic lupus and autoimmune markers" class="service-card-img" loading="lazy">
+              <span class="service-category-tag">Connective Tissue Care</span>
+              <div class="service-badge-overlay" title="Lupus & Connective Tissue Specialty">
+                <i class="ph ph-butterfly"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="card-title">Lupus & Connective Tissue</h3>
+              <p class="card-text">
+                Specialized management of Systemic Lupus Erythematosus (SLE), Sjogren's syndrome, scleroderma, and mixed connective tissue disease with multi-organ protection.
+              </p>
+              <div class="card-cta-group">
+                <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Appt</a>
+                <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+              </div>
+              <a href="services.html#lupus" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem; color: var(--color-primary); margin-top: 10px; font-weight: var(--weight-label);">
+                <span>Explore SLE Protocols</span> <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
           </article>
 
           <!-- Card 4 -->
-          <article class="service-card">
-            <div class="card-icon"><i class="ph ph-path"></i></div>
-            <h3 class="card-title">Psoriatic & Axial Arthritis</h3>
-            <p class="card-text">
-              Coordinated musculoskeletal and dermatological therapies targeting peripheral dactylitis, enthesitis, and ankylosing spondylitis spinal inflammation.
-            </p>
-            <a href="services.html#psa" class="btn btn-secondary">Discover Care</a>
+          <article class="service-card has-image">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Joint and spinal mobility examination for psoriatic and axial arthritis" class="service-card-img" loading="lazy">
+              <span class="service-category-tag">Spine &amp; Peripheral Joints</span>
+              <div class="service-badge-overlay" title="Psoriatic & Axial Arthritis Specialty">
+                <i class="ph ph-path"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="card-title">Psoriatic & Axial Arthritis</h3>
+              <p class="card-text">
+                Coordinated musculoskeletal and dermatological therapies targeting peripheral dactylitis, enthesitis, and ankylosing spondylitis spinal inflammation.
+              </p>
+              <div class="card-cta-group">
+                <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Appt</a>
+                <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+              </div>
+              <a href="services.html#psa" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem; color: var(--color-primary); margin-top: 10px; font-weight: var(--weight-label);">
+                <span>Discover Spondylitis Care</span> <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
           </article>
 
           <!-- Card 5 -->
-          <article class="service-card">
-            <div class="card-icon"><i class="ph ph-activity"></i></div>
-            <h3 class="card-title">Point-of-Care Ultrasound</h3>
-            <p class="card-text">
-              Zero-radiation, high-resolution musculoskeletal ultrasound for immediate visualization of subclinical joint effusion, synovitis, and hypervascularity.
-            </p>
-            <a href="services.html#ultrasound" class="btn btn-secondary">Diagnostic Tech</a>
+          <article class="service-card has-image">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Ultrasound imaging diagnostics for musculoskeletal inflammation" class="service-card-img" loading="lazy">
+              <span class="service-category-tag">Point-of-Care Imaging</span>
+              <div class="service-badge-overlay" title="Point-of-Care Ultrasound Specialty">
+                <i class="ph ph-activity"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="card-title">Point-of-Care Ultrasound</h3>
+              <p class="card-text">
+                Zero-radiation, high-resolution musculoskeletal ultrasound for immediate visualization of subclinical joint effusion, synovitis, and hypervascularity.
+              </p>
+              <div class="card-cta-group">
+                <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Appt</a>
+                <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+              </div>
+              <a href="services.html#ultrasound" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem; color: var(--color-primary); margin-top: 10px; font-weight: var(--weight-label);">
+                <span>View Ultrasound Tech</span> <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
           </article>
 
           <!-- Card 6 -->
-          <article class="service-card">
-            <div class="card-icon"><i class="ph ph-shield-check"></i></div>
-            <h3 class="card-title">Osteoporosis & Bone Health</h3>
-            <p class="card-text">
-              Comprehensive DEXA bone density evaluation, metabolic assessment, and anabolic therapies designed to rebuild skeletal strength and prevent fractures.
+          <article class="service-card has-image">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80" alt="Diagnostic imaging for bone mineral density and osteoporosis treatment" class="service-card-img" loading="lazy">
+              <span class="service-category-tag">Skeletal Bone Health</span>
+              <div class="service-badge-overlay" title="Osteoporosis & Bone Health Specialty">
+                <i class="ph ph-shield-check"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="card-title">Osteoporosis & Bone Health</h3>
+              <p class="card-text">
+                Comprehensive DEXA bone density evaluation, metabolic assessment, and anabolic therapies designed to rebuild skeletal strength and prevent fractures.
+              </p>
+              <div class="card-cta-group">
+                <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Appt</a>
+                <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+              </div>
+              <a href="services.html#osteoporosis" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem; color: var(--color-primary); margin-top: 10px; font-weight: var(--weight-label);">
+                <span>Explore Bone Health</span> <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. MEET THE DOCTORS (Phase 3 of Patient Journey) -->
+    <section class="section section-alt" id="specialistsTeam">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-users-three"></i> Clinical Faculty</span>
+          <h2 class="section-title">Meet Our Board-Certified Rheumatology Specialists</h2>
+          <p class="section-subtitle">
+            Consult directly with recognized academic leaders in autoimmune remission, precision biologic dosing, and advanced musculoskeletal ultrasound.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <!-- Doctor 1 -->
+          <article class="doctor-preview-card">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="Dr. Evelyn Vance, MD, FACR" class="doctor-preview-avatar" loading="lazy">
+            <h3 class="doctor-preview-name">Dr. Evelyn Vance, MD, FACR</h3>
+            <div class="doctor-preview-role">Founder &amp; Clinical Director</div>
+            <div class="doctor-preview-specialties">
+              <span class="doctor-tag">Rheumatoid Arthritis</span>
+              <span class="doctor-tag">Biologic Infusions</span>
+            </div>
+            <p class="doctor-preview-bio">
+              Harvard Medical School alumnus with 22 years of clinical excellence in arresting progressive rheumatoid arthritis and designing targeted biologic regimens.
             </p>
-            <a href="services.html#osteoporosis" class="btn btn-secondary">Bone Health</a>
+            <div class="doctor-card-cta-group">
+              <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Consult</a>
+              <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+            </div>
+          </article>
+
+          <!-- Doctor 2 -->
+          <article class="doctor-preview-card">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" alt="Dr. Marcus Sterling, MD, RhMSUS" class="doctor-preview-avatar" loading="lazy">
+            <h3 class="doctor-preview-name">Dr. Marcus Sterling, MD, RhMSUS</h3>
+            <div class="doctor-preview-role">Director of Joint Imaging &amp; Ultrasound</div>
+            <div class="doctor-preview-specialties">
+              <span class="doctor-tag">Musculoskeletal US</span>
+              <span class="doctor-tag">Regenerative Care</span>
+            </div>
+            <p class="doctor-preview-bio">
+              Nationally certified ultrasound educator specializing in high-resolution joint mapping and precision image-guided joint injections for instant flare relief.
+            </p>
+            <div class="doctor-card-cta-group">
+              <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Consult</a>
+              <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+            </div>
+          </article>
+
+          <!-- Doctor 3 -->
+          <article class="doctor-preview-card">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Dr. Serena Patel, MD" class="doctor-preview-avatar" loading="lazy">
+            <h3 class="doctor-preview-name">Dr. Serena Patel, MD</h3>
+            <div class="doctor-preview-role">Head of Connective Tissue Diseases</div>
+            <div class="doctor-preview-specialties">
+              <span class="doctor-tag">Lupus &amp; SLE</span>
+              <span class="doctor-tag">Sjogren's Syndrome</span>
+            </div>
+            <p class="doctor-preview-bio">
+              Johns Hopkins fellow renowned for multi-organ lupus management, autoimmune pregnancy counseling, and holistic systemic inflammation reduction.
+            </p>
+            <div class="doctor-card-cta-group">
+              <a href="contact.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book Consult</a>
+              <a href="contact.html#consultationForm" class="btn btn-accent"><i class="ph ph-chat-circle-dots"></i> Enquire</a>
+            </div>
           </article>
 
         </div>
@@ -289,7 +592,7 @@
           <span class="section-badge"><i class="ph ph-buildings"></i> Our Founding Philosophy</span>
           <h2 class="section-title">Bridging Medical Rigor with Human Empathy</h2>
           <p class="section-subtitle">
-            Living with an autoimmune disorder can feel isolating. At Rheumora, we treat the whole person â€” never just the laboratory titers.
+            Living with an autoimmune disorder can feel isolating. At Rheumora, we treat the whole person - never just the laboratory titers.
           </p>
         </div>
 
@@ -389,7 +692,7 @@
           <div class="testimonial-card">
             <div class="card-icon"><i class="ph ph-quotes"></i></div>
             <p class="testimonial-quote">
-              "The infusion suite is calm and reassuring. The nurses are extraordinarily gentle, and having an in-house lab means I donâ€™t spend my week running around to different clinics. It feels like true concierge medicine."
+              "The infusion suite is calm and reassuring. The nurses are extraordinarily gentle, and having an in-house lab means I don't spend my week running around to different clinics. It feels like true concierge medicine."
             </p>
             <div class="testimonial-author">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Patient David Chen" class="testimonial-avatar" loading="lazy">
@@ -424,10 +727,13 @@
         </p>
         <div class="cta-actions">
           <a href="contact.html" class="btn btn-accent">
-            <i class="ph ph-calendar-plus"></i> Request Priority Consultation
+            <i class="ph ph-calendar-check"></i> Book Appointment
           </a>
-          <a href="services.html" class="btn btn-secondary">
-            <i class="ph ph-phone-call"></i> Speak with Patient Navigator
+          <a href="contact.html#consultationForm" class="btn btn-secondary">
+            <i class="ph ph-chat-circle-dots"></i> Enquire with Care Team
+          </a>
+          <a href="services.html" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">
+            <i class="ph ph-first-aid"></i> View Infusion Services
           </a>
         </div>
       </div>
@@ -465,7 +771,8 @@
           <ul class="footer-links">
             <li><a href="index.html">Home Care Overview</a></li>
             <li><a href="home2.html">Home 2 (Navigator)</a></li>
-            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="services.html">Conditions Treated</a></li>
+            <li><a href="doctors.html">Our Specialists</a></li>
             <li><a href="about.html">About Medical Board</a></li>
           </ul>
         </div>
@@ -489,7 +796,7 @@
             <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
             <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
             <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
-            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon â€“ Fri: 7:30 AM â€“ 6:00 PM</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon - Fri: 7:30 AM - 6:00 PM</li>
           </ul>
         </div>
 
@@ -505,6 +812,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Quick Booking Widget -->
+  <aside class="floating-book-widget" aria-label="Quick Appointment Booking">
+    <a href="contact.html" class="floating-book-btn" title="Book Appointment">
+      <i class="ph ph-calendar-plus" style="font-size: 1.25rem;"></i>
+      <span>Book Appointment</span>
+    </a>
+  </aside>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>

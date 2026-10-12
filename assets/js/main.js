@@ -372,7 +372,7 @@
         recommendation: 'Synovial Fluid Cytology + Image-Guided Corticosteroid or Viscosupplementation'
       },
       systemic: {
-        title: 'Systemic Autoimmune & Connective Tissue (Lupus / Sjögren’s)',
+        title: "Systemic Autoimmune & Connective Tissue (Lupus / Sjogren's)",
         desc: 'Unexplained debilitating fatigue, malar facial rash, dry eyes and mouth (sicca syndrome), photosensitivity, and Raynaud’s phenomenon in fingers indicate systemic connective tissue involvement requiring multidisciplinary care.',
         tags: ['Severe Fatigue', 'Malar Butterfly Rash', 'Raynaud Phenomenon', 'Sicca Syndrome'],
         img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',

@@ -1,5 +1,5 @@
 # Rheumora Comprehensive Automated Test Suite
-$dir = "d:\project 2\Rheumatology & Autoimmune Care Center"
+$dir = if ($PSScriptRoot) { $PSScriptRoot } else { "." }
 $errors = [System.Collections.Generic.List[string]]::new()
 $warnings = [System.Collections.Generic.List[string]]::new()
 $passed = [System.Collections.Generic.List[string]]::new()

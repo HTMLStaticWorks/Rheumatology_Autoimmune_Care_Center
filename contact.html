@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Appointment Scheduling â€” Rheumora</title>
+  <title>Contact &amp; Appointment Scheduling | Rheumora</title>
   <meta name="description" content="Schedule your rheumatology consultation, request infusion transfer, or contact our clinical nursing triage coordinators at Rheumora.">
   
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -12,6 +12,24 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body>
+
+  <!-- Top Clinical Information & Quick Direct Actions Bar -->
+  <aside class="top-clinic-bar" aria-label="Clinical Hours and Direct Actions">
+    <div class="top-clinic-bar-inner">
+      <div class="top-clinic-badge">
+        <i class="ph ph-shield-check"></i>
+        <span>Accredited Autoimmune &amp; Biologic Center | Direct Nurse Triage Available</span>
+      </div>
+      <div class="top-clinic-contacts">
+        <a href="tel:+18007438667" class="top-clinic-link">
+          <i class="ph ph-phone"></i> +1 (800) 743-8667
+        </a>
+        <a href="#consultationForm" class="top-clinic-cta-enquire">
+          <i class="ph ph-chat-circle-dots"></i> Enquire Now
+        </a>
+      </div>
+    </div>
+  </aside>
 
   <!-- SITE HEADER -->
   <header class="site-header" id="siteHeader">
@@ -26,7 +44,8 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="home2.html" class="nav-link">Home 2</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="services.html" class="nav-link">Conditions Treated</a></li>
+          <li><a href="doctors.html" class="nav-link">Doctors</a></li>
           <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="contact.html" class="nav-link active">Contact</a></li>
@@ -67,7 +86,8 @@
     <ul class="drawer-nav">
       <li><a href="index.html" class="drawer-link"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
       <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
-      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Services</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Conditions Treated</a></li>
+      <li><a href="doctors.html" class="drawer-link"><i class="ph ph-users-three" style="margin-inline-end: 10px;"></i> Doctors</a></li>
       <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
       <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
       <li><a href="contact.html" class="drawer-link active"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
@@ -89,8 +109,8 @@
   <!-- MAIN CONTENT -->
   <main id="mainContent">
 
-    <!-- PAGE HEADER -->
-    <section class="section section-alt" style="padding-bottom: var(--space-2xl);">
+    <!-- PAGE HERO -->
+    <section class="page-hero page-hero-contact">
       <div class="container">
         <div class="section-header" style="margin-bottom: 0;">
           <span class="section-badge"><i class="ph ph-calendar-check"></i> Patient Intake & Appointments</span>
@@ -111,8 +131,8 @@
           <!-- Contact Form with Step 12 Client-side Validation -->
           <div style="background-color: var(--color-surface); border-radius: var(--radius-global); border: 1px solid var(--color-border); box-shadow: var(--shadow-global); padding: var(--space-xl);">
             <div class="form-header-block" style="margin-bottom: var(--space-md);">
-              <h2 style="font-size: var(--size-h3); margin-bottom: 6px;">Request Consultation</h2>
-              <p style="font-size: 0.95rem; margin-bottom: 0;">All medical inquiries are held in strict adherence to HIPAA standards.</p>
+              <h2 style="font-size: var(--size-h3); margin-bottom: 6px;">Book Appointment / Clinical Enquiry</h2>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">Fill out the details below to schedule an evaluation or enquire about treatment protocols. All medical inquiries adhere strictly to HIPAA standards.</p>
             </div>
 
             <form id="consultationForm" data-validate="true" data-success-msg="Thank you! Your consultation request has been received. Our clinical intake coordinator will call you within 1 business day.">
@@ -169,9 +189,12 @@
                 <label for="contactConsent">I agree to be contacted regarding my clinical appointment and understand communications are secure.</label>
               </div>
 
-              <div style="display: flex; justify-content: center; width: 100%;">
-                <button type="submit" class="btn btn-primary" data-original-text="Submit Consultation Request">
-                  <i class="ph ph-calendar-plus"></i> Submit Consultation Request
+              <div style="display: flex; gap: 12px; justify-content: center; width: 100%; flex-wrap: wrap;">
+                <button type="submit" class="btn btn-primary" data-original-text="Book Appointment">
+                  <i class="ph ph-calendar-check"></i> Book Appointment
+                </button>
+                <button type="submit" class="btn btn-accent" data-original-text="Submit Clinical Enquiry">
+                  <i class="ph ph-chat-circle-dots"></i> Enquire with Specialist
                 </button>
               </div>
             </form>
@@ -198,8 +221,8 @@
 
               <p style="margin-bottom: 0;">
                 <strong>Clinical Hours:</strong><br>
-                Monday â€“ Friday: 7:30 AM â€“ 6:00 PM<br>
-                Saturday (Infusion Suite Only): 8:00 AM â€“ 2:00 PM<br>
+                Monday - Friday: 7:30 AM - 6:00 PM<br>
+                Saturday (Infusion Suite Only): 8:00 AM - 2:00 PM<br>
                 Sunday: Closed (On-Call Nurse Triage Active)
               </p>
               
@@ -291,7 +314,8 @@
           <ul class="footer-links">
             <li><a href="index.html">Home Care Overview</a></li>
             <li><a href="home2.html">Home 2 (Navigator)</a></li>
-            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="services.html">Conditions Treated</a></li>
+            <li><a href="doctors.html">Our Specialists</a></li>
             <li><a href="about.html">About Medical Board</a></li>
           </ul>
         </div>
@@ -313,7 +337,7 @@
             <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
             <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
             <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
-            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon â€“ Fri: 7:30 AM â€“ 6:00 PM</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon - Fri: 7:30 AM - 6:00 PM</li>
           </ul>
         </div>
 
@@ -329,6 +353,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Quick Booking Widget -->
+  <aside class="floating-book-widget" aria-label="Quick Appointment Booking">
+    <a href="#consultationForm" class="floating-book-btn" title="Book Appointment">
+      <i class="ph ph-calendar-plus" style="font-size: 1.25rem;"></i>
+      <span>Book Appointment</span>
+    </a>
+  </aside>
 
   <script src="assets/js/main.js"></script>
 </body>

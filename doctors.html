@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board-Certified Rheumatologists &amp; Autoimmune Specialists | Rheumora</title>
+  <meta name="description" content="Meet our board-certified rheumatologists, musculoskeletal ultrasound faculty, and clinical infusion coordinators at Rheumora dedicated to transforming autoimmune patient care.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Top Clinical Information & Quick Direct Actions Bar -->
+  <aside class="top-clinic-bar" aria-label="Clinical Hours and Direct Actions">
+    <div class="top-clinic-bar-inner">
+      <div class="top-clinic-badge">
+        <i class="ph ph-shield-check"></i>
+        <span>Accredited Autoimmune &amp; Biologic Center | Direct Nurse Triage Available</span>
+      </div>
+      <div class="top-clinic-contacts">
+        <a href="tel:+18007438667" class="top-clinic-link">
+          <i class="ph ph-phone"></i> +1 (800) 743-8667
+        </a>
+        <a href="contact.html" class="top-clinic-cta-enquire">
+          <i class="ph ph-chat-circle-dots"></i> Enquire Now
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="logo" aria-label="Rheumora Homepage">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+
+      <!-- Desktop Nav Menu (> 1024px) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Conditions Treated</a></li>
+          <li><a href="doctors.html" class="nav-link active">Doctors</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions Right -->
+      <div class="header-actions">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+
+        <button type="button" class="btn-icon-square theme-toggle-btn" id="desktopThemeToggle" aria-label="Switch theme mode" title="Toggle Dark/Light mode">
+          <i class="ph ph-moon"></i>
+        </button>
+
+        <a href="login.html" class="btn btn-primary">Login</a>
+
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Slide Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+        <span>Rheumora</span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="drawer-link"><i class="ph ph-house" style="margin-inline-end: 10px;"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ph ph-browsers" style="margin-inline-end: 10px;"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ph ph-first-aid" style="margin-inline-end: 10px;"></i> Conditions Treated</a></li>
+      <li><a href="doctors.html" class="drawer-link active"><i class="ph ph-users-three" style="margin-inline-end: 10px;"></i> Doctors</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="ph ph-info" style="margin-inline-end: 10px;"></i> About Us</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ph ph-article" style="margin-inline-end: 10px;"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ph ph-envelope-simple" style="margin-inline-end: 10px;"></i> Contact</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <div class="drawer-utility-row">
+        <button type="button" class="btn-icon-square rtl-toggle-btn" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button type="button" class="btn-icon-square theme-toggle-btn" aria-label="Switch theme mode">
+          <i class="ph ph-moon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero page-hero-doctors">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <span class="section-badge"><i class="ph ph-users-three"></i> Clinical Faculty &amp; Care Team</span>
+          <h1 style="font-size: clamp(2.5rem, 5vw, 4.2rem); margin-bottom: var(--space-xs);">Meet Our Rheumatology Specialists</h1>
+          <p class="section-subtitle">
+            Board-certified rheumatologists, musculoskeletal ultrasound educators, and clinical infusion coordinators working collaboratively to deliver rapid remission and long-term joint health.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="stats-strip" aria-label="Faculty Credentials">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-item-num">100%</span>
+            <span class="stat-item-label">Board-Certified in Rheumatology</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item-num">25+ Yrs</span>
+            <span class="stat-item-label">Combined Academic Leadership</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item-num">RhMSUS</span>
+            <span class="stat-item-label">Ultrasound Certified Faculty</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item-num">14 Days</span>
+            <span class="stat-item-label">Average Intake Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCTOR DIRECTORY SECTION -->
+    <section class="section" id="doctorsDirectory">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-stethoscope"></i> Clinical Faculty</span>
+          <h2 class="section-title">Our Multidisciplinary Care Team</h2>
+          <p class="section-subtitle">
+            Every specialist at Rheumora brings recognized subspecialty expertise across autoimmune inflammatory conditions, joint ultrasound diagnostics, and targeted biologic protocols.
+          </p>
+        </div>
+
+        <!-- Directory List -->
+        <div class="doctors-directory-list">
+          
+          <!-- Doctor 1: Dr. Evelyn Vance -->
+          <article class="doctor-detail-card" id="dr-vance">
+            <div class="doctor-detail-media">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="Dr. Evelyn Vance, MD, FACR" class="doctor-detail-img" loading="lazy">
+              <div class="doctor-rating-badge">
+                <i class="ph ph-star-fill"></i>
+                <span>4.9 / 5.0 (320+ Reviews)</span>
+              </div>
+            </div>
+            <div class="doctor-detail-content">
+              <div class="doctor-detail-header">
+                <div>
+                  <h3 class="doctor-detail-name">Dr. Evelyn Vance, MD, FACR</h3>
+                  <div class="doctor-detail-title">Founder &amp; Clinical Medical Director</div>
+                  <div class="doctor-detail-creds">Harvard Medical School • Brigham &amp; Women's Hospital Fellowship • ACR Fellow</div>
+                </div>
+                <div class="doctor-preview-specialties">
+                  <span class="doctor-tag">Rheumatoid Arthritis</span>
+                  <span class="doctor-tag">Biologic Protocols</span>
+                  <span class="doctor-tag">Refractory Synovitis</span>
+                </div>
+              </div>
+              <p class="doctor-detail-bio">
+                With 22 years of academic leadership and direct clinical care, Dr. Vance pioneered rapid intervention protocols that arrest autoimmune joint damage in early stages. She specializes in targeted biologic regimens and refractory arthritis management.
+              </p>
+              <div class="doctor-detail-meta-grid">
+                <div class="doctor-meta-item">
+                  <i class="ph ph-calendar"></i>
+                  <span>Clinic Days: Mon, Tue, Thu</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-map-pin"></i>
+                  <span>Boston Suite 400</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-translate"></i>
+                  <span>English, Spanish</span>
+                </div>
+              </div>
+              <div class="doctor-detail-actions">
+                <a href="contact.html" class="btn btn-primary">
+                  <i class="ph ph-calendar-check"></i> Book Consult with Dr. Vance
+                </a>
+                <a href="contact.html#consultationForm" class="btn btn-secondary">
+                  <i class="ph ph-chat-circle-dots"></i> Quick Clinical Enquiry
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 2: Dr. Marcus Sterling -->
+          <article class="doctor-detail-card" id="dr-sterling">
+            <div class="doctor-detail-media">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" alt="Dr. Marcus Sterling, MD, RhMSUS" class="doctor-detail-img" loading="lazy">
+              <div class="doctor-rating-badge">
+                <i class="ph ph-star-fill"></i>
+                <span>4.9 / 5.0 (280+ Reviews)</span>
+              </div>
+            </div>
+            <div class="doctor-detail-content">
+              <div class="doctor-detail-header">
+                <div>
+                  <h3 class="doctor-detail-name">Dr. Marcus Sterling, MD, RhMSUS</h3>
+                  <div class="doctor-detail-title">Director of Musculoskeletal Imaging &amp; Joint Procedures</div>
+                  <div class="doctor-detail-creds">Johns Hopkins Medicine • USSONAR Advanced Educator • RhMSUS Certified</div>
+                </div>
+                <div class="doctor-preview-specialties">
+                  <span class="doctor-tag">Point-of-Care Ultrasound</span>
+                  <span class="doctor-tag">Guided Injections</span>
+                  <span class="doctor-tag">Power Doppler</span>
+                </div>
+              </div>
+              <p class="doctor-detail-bio">
+                A nationally recognized faculty educator in point-of-care joint ultrasound, Dr. Sterling provides same-day diagnostic imaging to pinpoint subclinical synovial inflammation and perform ultrasound-guided joint aspiration and regenerative injections.
+              </p>
+              <div class="doctor-detail-meta-grid">
+                <div class="doctor-meta-item">
+                  <i class="ph ph-calendar"></i>
+                  <span>Clinic Days: Mon, Wed, Fri</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-map-pin"></i>
+                  <span>Ultrasound Lab Suite 404</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-translate"></i>
+                  <span>English</span>
+                </div>
+              </div>
+              <div class="doctor-detail-actions">
+                <a href="contact.html" class="btn btn-primary">
+                  <i class="ph ph-calendar-check"></i> Book Consult with Dr. Sterling
+                </a>
+                <a href="contact.html#consultationForm" class="btn btn-secondary">
+                  <i class="ph ph-chat-circle-dots"></i> Quick Clinical Enquiry
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 3: Dr. Serena Patel -->
+          <article class="doctor-detail-card" id="dr-patel">
+            <div class="doctor-detail-media">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Dr. Serena Patel, MD" class="doctor-detail-img" loading="lazy">
+              <div class="doctor-rating-badge">
+                <i class="ph ph-star-fill"></i>
+                <span>5.0 / 5.0 (260+ Reviews)</span>
+              </div>
+            </div>
+            <div class="doctor-detail-content">
+              <div class="doctor-detail-header">
+                <div>
+                  <h3 class="doctor-detail-name">Dr. Serena Patel, MD</h3>
+                  <div class="doctor-detail-title">Head of Connective Tissue Diseases &amp; Systemic Autoimmunity</div>
+                  <div class="doctor-detail-creds">Columbia University Vagelos College • NIH Autoimmune Fellow</div>
+                </div>
+                <div class="doctor-preview-specialties">
+                  <span class="doctor-tag">Systemic Lupus (SLE)</span>
+                  <span class="doctor-tag">Sjogren's Syndrome</span>
+                  <span class="doctor-tag">Autoimmune Pregnancy</span>
+                </div>
+              </div>
+              <p class="doctor-detail-bio">
+                Dr. Patel delivers comprehensive multidisciplinary care for patients navigating systemic lupus, Sjogren's syndrome, scleroderma, and vasculitis. She leads our specialized autoimmune pregnancy co-management protocols with exceptional maternal-fetal outcomes.
+              </p>
+              <div class="doctor-detail-meta-grid">
+                <div class="doctor-meta-item">
+                  <i class="ph ph-calendar"></i>
+                  <span>Clinic Days: Tue, Wed, Thu</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-map-pin"></i>
+                  <span>Boston Suite 400</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-translate"></i>
+                  <span>English, Hindi</span>
+                </div>
+              </div>
+              <div class="doctor-detail-actions">
+                <a href="contact.html" class="btn btn-primary">
+                  <i class="ph ph-calendar-check"></i> Book Consult with Dr. Patel
+                </a>
+                <a href="contact.html#consultationForm" class="btn btn-secondary">
+                  <i class="ph ph-chat-circle-dots"></i> Quick Clinical Enquiry
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 4: Dr. Julian Bennett -->
+          <article class="doctor-detail-card" id="dr-bennett">
+            <div class="doctor-detail-media">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80" alt="Dr. Julian Bennett, MD, PhD" class="doctor-detail-img" loading="lazy">
+              <div class="doctor-rating-badge">
+                <i class="ph ph-star-fill"></i>
+                <span>4.8 / 5.0 (190+ Reviews)</span>
+              </div>
+            </div>
+            <div class="doctor-detail-content">
+              <div class="doctor-detail-header">
+                <div>
+                  <h3 class="doctor-detail-name">Dr. Julian Bennett, MD, PhD</h3>
+                  <div class="doctor-detail-title">Senior Clinical Immunologist &amp; Spondyloarthritis Director</div>
+                  <div class="doctor-detail-creds">Oxford University (DPhil) • Stanford Medical Center Fellowship</div>
+                </div>
+                <div class="doctor-preview-specialties">
+                  <span class="doctor-tag">Psoriatic Arthritis</span>
+                  <span class="doctor-tag">Ankylosing Spondylitis</span>
+                  <span class="doctor-tag">JAK Inhibitors</span>
+                </div>
+              </div>
+              <p class="doctor-detail-bio">
+                Dr. Bennett combines bench-to-bedside immunology research with compassionate clinical management. He specializes in spinal inflammation, enthesitis, and modern biologic choices targeting IL-17, IL-23, and intracellular signaling cascades.
+              </p>
+              <div class="doctor-detail-meta-grid">
+                <div class="doctor-meta-item">
+                  <i class="ph ph-calendar"></i>
+                  <span>Clinic Days: Mon, Wed, Thu</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-map-pin"></i>
+                  <span>Boston Suite 400</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-translate"></i>
+                  <span>English, French</span>
+                </div>
+              </div>
+              <div class="doctor-detail-actions">
+                <a href="contact.html" class="btn btn-primary">
+                  <i class="ph ph-calendar-check"></i> Book Consult with Dr. Bennett
+                </a>
+                <a href="contact.html#consultationForm" class="btn btn-secondary">
+                  <i class="ph ph-chat-circle-dots"></i> Quick Clinical Enquiry
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 5: Dr. Catherine Reynolds -->
+          <article class="doctor-detail-card" id="dr-reynolds">
+            <div class="doctor-detail-media">
+              <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=400&q=80" alt="Dr. Catherine Reynolds, MD, RhMSUS" class="doctor-detail-img" loading="lazy">
+              <div class="doctor-rating-badge">
+                <i class="ph ph-star-fill"></i>
+                <span>4.9 / 5.0 (215+ Reviews)</span>
+              </div>
+            </div>
+            <div class="doctor-detail-content">
+              <div class="doctor-detail-header">
+                <div>
+                  <h3 class="doctor-detail-name">Dr. Catherine Reynolds, MD, RhMSUS</h3>
+                  <div class="doctor-detail-title">Director of Bone Health &amp; Skeletal Metabolic Medicine</div>
+                  <div class="doctor-detail-creds">Yale School of Medicine • Mass General Hospital Bone Division</div>
+                </div>
+                <div class="doctor-preview-specialties">
+                  <span class="doctor-tag">Osteoporosis</span>
+                  <span class="doctor-tag">Anabolic Bone Care</span>
+                  <span class="doctor-tag">DEXA Density</span>
+                </div>
+              </div>
+              <p class="doctor-detail-bio">
+                Dedicated to preventing fractures and reversing steroid-induced bone loss, Dr. Reynolds designs comprehensive skeletal rebuilding plans leveraging cutting-edge anabolic therapies, metabolic lab monitoring, and bone density scans.
+              </p>
+              <div class="doctor-detail-meta-grid">
+                <div class="doctor-meta-item">
+                  <i class="ph ph-calendar"></i>
+                  <span>Clinic Days: Mon, Tue, Fri</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-map-pin"></i>
+                  <span>Bone Health Suite 406</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-translate"></i>
+                  <span>English</span>
+                </div>
+              </div>
+              <div class="doctor-detail-actions">
+                <a href="contact.html" class="btn btn-primary">
+                  <i class="ph ph-calendar-check"></i> Book Consult with Dr. Reynolds
+                </a>
+                <a href="contact.html#consultationForm" class="btn btn-secondary">
+                  <i class="ph ph-chat-circle-dots"></i> Quick Clinical Enquiry
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 6: Sarah Jenkins -->
+          <article class="doctor-detail-card" id="sarah-jenkins">
+            <div class="doctor-detail-media">
+              <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=400&q=80" alt="Sarah Jenkins, MSN, APRN, FNP-C" class="doctor-detail-img" loading="lazy">
+              <div class="doctor-rating-badge">
+                <i class="ph ph-star-fill"></i>
+                <span>5.0 / 5.0 (410+ Reviews)</span>
+              </div>
+            </div>
+            <div class="doctor-detail-content">
+              <div class="doctor-detail-header">
+                <div>
+                  <h3 class="doctor-detail-name">Sarah Jenkins, MSN, APRN, FNP-C</h3>
+                  <div class="doctor-detail-title">Lead Clinical Coordinator &amp; Infusion Suite Director</div>
+                  <div class="doctor-detail-creds">Boston College School of Nursing • Certified Rheumatology Nurse Specialist</div>
+                </div>
+                <div class="doctor-preview-specialties">
+                  <span class="doctor-tag">Biologic Infusions</span>
+                  <span class="doctor-tag">Acute Flare Triage</span>
+                  <span class="doctor-tag">Prior Authorizations</span>
+                </div>
+              </div>
+              <p class="doctor-detail-bio">
+                Sarah oversees Rheumora's state-of-the-art biologic infusion center and coordinates urgent nurse triage lines. She partners with patients to eliminate treatment anxieties, ensure seamless insurance approvals, and maintain gentle, continuous monitoring.
+              </p>
+              <div class="doctor-detail-meta-grid">
+                <div class="doctor-meta-item">
+                  <i class="ph ph-calendar"></i>
+                  <span>Clinic Days: Mon - Fri</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-map-pin"></i>
+                  <span>Infusion Wing Suite 402</span>
+                </div>
+                <div class="doctor-meta-item">
+                  <i class="ph ph-translate"></i>
+                  <span>English</span>
+                </div>
+              </div>
+              <div class="doctor-detail-actions">
+                <a href="contact.html" class="btn btn-primary">
+                  <i class="ph ph-calendar-check"></i> Book Infusion / Triage Consult
+                </a>
+                <a href="contact.html#consultationForm" class="btn btn-secondary">
+                  <i class="ph ph-chat-circle-dots"></i> Quick Clinical Enquiry
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY / STANDARDS OF CARE -->
+    <section class="section section-alt" id="clinicalStandards">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="ph ph-certificate"></i> Clinical Excellence</span>
+          <h2 class="section-title">The Rheumora Standard of Practice</h2>
+          <p class="section-subtitle">
+            Every physician on our board adheres to rigorous clinical standards designed to elevate autoimmune outcomes.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-clock"></i></div>
+            <h3 class="card-title">60-Minute New Patient Intake</h3>
+            <p class="card-text">
+              We never rush consultations. Our specialists invest dedicated time to listen to your entire symptom timeline, review prior lab history, and perform hands-on joint evaluations.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-crosshair"></i></div>
+            <h3 class="card-title">Same-Visit Ultrasound Imaging</h3>
+            <p class="card-text">
+              Diagnostic joint ultrasound is integrated directly into physician visits, avoiding weeks of waiting for outside radiology scans and enabling immediate clinical decisions.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ph ph-shield-check"></i></div>
+            <h3 class="card-title">Dedicated Insurance Navigators</h3>
+            <p class="card-text">
+              Our clinical navigators take charge of prior authorizations, copay assistance cards, and manufacturer foundation grants so your therapies are approved without delay.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Schedule Your Evaluation with Our Specialists</h2>
+        <p>
+          Take the first step toward sustained joint mobility and relief. Our clinical team guarantees rapid priority access within 14 business days.
+        </p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-accent">
+            <i class="ph ph-calendar-check"></i> Book Appointment Now
+          </a>
+          <a href="contact.html#consultationForm" class="btn btn-secondary">
+            <i class="ph ph-chat-circle-dots"></i> Quick Clinical Enquiry
+          </a>
+          <a href="services.html" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">
+            <i class="ph ph-first-aid"></i> View Conditions Treated
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;">
+            <span class="logo-symbol"><i class="ph ph-heartbeat"></i></span>
+            <span>Rheumora</span>
+          </a>
+          <p class="footer-desc">
+            A specialized center dedicated to transforming the diagnosis, biologic therapy, and sustained remission of autoimmune, arthritis, and connective tissue diseases.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Care Center</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="home2.html">Home 2 (Navigator)</a></li>
+            <li><a href="services.html">Conditions Treated</a></li>
+            <li><a href="doctors.html">Our Specialists</a></li>
+            <li><a href="about.html">About Medical Board</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Conditions</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#ra">Rheumatoid Arthritis</a></li>
+            <li><a href="services.html#lupus">Systemic Lupus (SLE)</a></li>
+            <li><a href="services.html#psa">Psoriatic Arthritis</a></li>
+            <li><a href="services.html#infusion">Biologic Infusion Suites</a></li>
+            <li><a href="services.html#ultrasound">Musculoskeletal Ultrasound</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Clinic</h4>
+          <ul class="footer-links">
+            <li><i class="ph ph-map-pin" style="margin-inline-end: 6px;"></i> 450 Medical Arts Pavilion, Suite 400, Boston, MA 02115</li>
+            <li><i class="ph ph-phone" style="margin-inline-end: 6px;"></i> +1 (800) 743-8667</li>
+            <li><i class="ph ph-envelope" style="margin-inline-end: 6px;"></i> care@rheumora-health.com</li>
+            <li><i class="ph ph-clock" style="margin-inline-end: 6px;"></i> Mon - Fri: 7:30 AM - 6:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; 2026 Rheumora Autoimmune Care Center. All rights reserved. HIPAA Compliant Clinical Practice.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Booking Widget -->
+  <div class="floating-book-widget">
+    <a href="contact.html" class="floating-book-btn" aria-label="Book appointment now">
+      <i class="ph ph-calendar-plus" style="font-size: 1.25rem;"></i>
+      <span>Book Appointment</span>
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Back to top of page">
+    <i class="ph ph-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
