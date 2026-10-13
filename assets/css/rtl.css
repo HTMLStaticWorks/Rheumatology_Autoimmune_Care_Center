@@ -35,7 +35,7 @@ body.rtl .drawer-link.active {
 [dir="rtl"] .floating-stat-card,
 body.rtl .floating-stat-card {
   right: auto;
-  left: var(--space-lg);
+  left: var(--space-sm);
   text-align: right;
 }
 
