@@ -160,11 +160,11 @@
             </p>
 
             <!-- Clinical Author Card -->
-            <div class="author-bio-card" style="background-color: var(--color-surface-soft); border-radius: var(--radius-global); border: 1px solid var(--color-border); padding: var(--space-lg); margin-top: var(--space-2xl); display: flex; gap: 20px; align-items: center;">
-              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=160&q=80" alt="Dr. Evelyn Vance" style="width: 80px; height: 80px; border-radius: var(--radius-global); object-fit: cover;">
-              <div>
-                <h3 style="font-size: 1.15rem; margin-bottom: 4px;">About the Author: Dr. Evelyn Vance, MD, FACR</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 0;">
+            <div class="author-bio-card">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=160&q=80" alt="Dr. Evelyn Vance" class="author-bio-avatar">
+              <div class="author-bio-content">
+                <h3 class="author-bio-title">About the Author: Dr. Evelyn Vance, MD, FACR</h3>
+                <p class="author-bio-text">
                   Dr. Vance has over 20 years of clinical practice in academic and outpatient rheumatology. She serves on the American College of Rheumatology Clinical Quality Committee and directs the Biologic Infusion Suites at Rheumora.
                 </p>
               </div>
@@ -278,7 +278,13 @@
         </button>
       </div>
     </div>
-  </footer>
+  <!-- Floating Quick Booking Widget -->
+  <aside class="floating-book-widget" aria-label="Quick Appointment Booking">
+    <a href="contact.html" class="floating-book-btn" title="Book Appointment">
+      <i class="ph ph-calendar-plus" style="font-size: 1.25rem;"></i>
+      <span>Book Appointment</span>
+    </a>
+  </aside>
 
   <script src="assets/js/main.js"></script>
 </body>

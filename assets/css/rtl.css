@@ -123,3 +123,18 @@ body.rtl .kpi-card {
 body.rtl .footer-links a:hover {
   padding-inline-start: 4px;
 }
+
+/* Floating Quick Action CTA RTL Position */
+[dir="rtl"] .floating-book-widget,
+body.rtl .floating-book-widget {
+  right: auto;
+  left: 24px;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .floating-book-widget,
+  body.rtl .floating-book-widget {
+    right: auto !important;
+    left: 16px !important;
+  }
+}

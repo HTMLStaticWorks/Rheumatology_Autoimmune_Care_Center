@@ -116,6 +116,7 @@
       if (drawer && backdrop) {
         drawer.classList.add('active');
         backdrop.classList.add('active');
+        document.body.classList.add('drawer-open');
         document.body.style.overflow = 'hidden';
       }
     }
@@ -125,9 +126,17 @@
       if (drawer && backdrop) {
         drawer.classList.remove('active');
         backdrop.classList.remove('active');
+        document.body.classList.remove('drawer-open');
         document.body.style.overflow = '';
       }
     }
+
+    // Auto close drawer if viewport is resized beyond 1024px
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024 && drawer && drawer.classList.contains('active')) {
+        closeDrawer();
+      }
+    }, { passive: true });
 
     if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
